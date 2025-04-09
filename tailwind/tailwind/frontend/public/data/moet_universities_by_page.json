@@ -1,0 +1,1310 @@
+[
+  {
+    "name": "ĐẠI HỌC BÁCH KHOA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "ĐẠI HỌC ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "ĐẠI HỌC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "ĐẠI HỌC KINH TẾ TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "ĐẠI HỌC THÁI NGUYÊN",
+    "location": "Thái Nguyên"
+  },
+  {
+    "name": "ĐẠI HỌC Y DƯỢC TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "HỌC VIỆN ÂM NHẠC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "HỌC VIỆN ÂM NHẠC QUỐC GIA VIỆT NAM",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN BÁO CHÍ VÀ TUYÊN TRUYỀN",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN CÁN BỘ THÀNH PHỐ HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN CHÍNH SÁCH VÀ PHÁT TRIỂN",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN CHÍNH TRỊ KHU VỰC I",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN CHÍNH TRỊ QUỐC GIA HỒ CHÍ MINH",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN DÂN TỘC",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN HÀNG KHÔNG VIỆT NAM",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "HỌC VIỆN HÀNH CHÍNH QUỐC GIA",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN KHOA HỌC VÀ CÔNG NGHỆ",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN KHOA HỌC XÃ HỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN KHOA HỌC, CÔNG NGHỆ VÀ ĐỔI MỚI SÁNG TẠO",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN MÚA VIỆT NAM",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN NÔNG NGHIỆP VIỆT NAM",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN NGÂN HÀNG",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN NGOẠI GIAO",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN PHỤ NỮ VIỆT NAM",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN QUẢN LÝ GIÁO DỤC",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN TÀI CHÍNH",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN TOÀ ÁN",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN THANH THIẾU NIÊN VIỆT NAM",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "HỌC VIỆN Y DƯỢC HỌC CỔ TRUYỀN VIỆT NAM",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "NHẠC VIỆN TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "Trường Cao đẳng Bắc Kạn",
+    "location": "Bắc Kạn"
+  },
+  {
+    "name": "Trường Cao đẳng Bến Tre",
+    "location": "Bến Tre"
+  },
+  {
+    "name": "Trường Cao đẳng Bình Định",
+    "location": "Bình Định"
+  },
+  {
+    "name": "Trường Cao đẳng Bình Phước",
+    "location": "Bình Phước"
+  },
+  {
+    "name": "Trường Cao đẳng Cần Thơ",
+    "location": "Cần Thơ"
+  },
+  {
+    "name": "Trường Cao đẳng Cộng đồng Bình Thuận",
+    "location": "Bình Thuận"
+  },
+  {
+    "name": "Trường Cao đẳng Cộng đồng Cà Mau",
+    "location": "Cà Mau"
+  },
+  {
+    "name": "Trường Cao đẳng Cộng đồng Hà Nội",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Trường Cao đẳng Cộng đồng Hậu Giang",
+    "location": "Hậu Giang"
+  },
+  {
+    "name": "Trường Cao đẳng Cộng đồng Hưng Yên",
+    "location": "Hưng Yên"
+  },
+  {
+    "name": "Trường Cao đẳng Cộng đồng Kon Tum",
+    "location": "Kon Tum"
+  },
+  {
+    "name": "Trường Cao đẳng Cộng đồng Lai Châu",
+    "location": "Lai Châu"
+  },
+  {
+    "name": "Trường Cao đẳng Cộng đồng Sóc Trăng",
+    "location": "Sóc Trăng"
+  },
+  {
+    "name": "Trường Cao đẳng Cộng đồng Vĩnh Long",
+    "location": "Vĩnh Long"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG ĐÀ LẠT",
+    "location": "Lâm Đồng"
+  },
+  {
+    "name": "Trường Cao đẳng Đại Việt Sài Gòn",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "Trường Cao đẳng Hải Dương",
+    "location": "Hải Dương"
+  },
+  {
+    "name": "Trường Cao đẳng Ngô Gia Tự Bắc Giang",
+    "location": "Bắc Giang"
+  },
+  {
+    "name": "Trường Cao đẳng Sơn La",
+    "location": "Sơn La"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM BÀ RỊA-VŨNG TÀU",
+    "location": "Bà Rịa - Vũng Tàu"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM BẮC NINH",
+    "location": "Bắc Ninh"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM CAO BẰNG",
+    "location": "Cao Bằng"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM ĐẮK LẮK",
+    "location": "Đắk Lắk"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM ĐIỆN BIÊN",
+    "location": "Điện Biên"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM GIA LAI",
+    "location": "Gia Lai"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM HÀ GIANG",
+    "location": "Hà Giang"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM HÀ TÂY",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM HOÀ BÌNH",
+    "location": "Hoà Bình"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM KIÊN GIANG",
+    "location": "Kiên Giang"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM LẠNG SƠN",
+    "location": "Lạng Sơn"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM LONG AN",
+    "location": "Long An"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM NAM ĐỊNH",
+    "location": "Nam Định"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM NGHỆ AN",
+    "location": "Nghệ An"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM QUẢNG TRỊ",
+    "location": "Quảng Trị"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM TÂY NINH",
+    "location": "Tây Ninh"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM THÁI BÌNH",
+    "location": "Thái Bình"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM THỪA THIÊN HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM TRUNG ƯƠNG",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM TRUNG ƯƠNG NHA TRANG",
+    "location": "Khánh Hoà"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM TRUNG ƯƠNG TP.HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG CAO ĐẲNG SƯ PHẠM YÊN BÁI",
+    "location": "Yên Bái"
+  },
+  {
+    "name": "Trường Cao đẳng Vĩnh Long",
+    "location": "Vĩnh Long"
+  },
+  {
+    "name": "Trường Cao đẳng Vĩnh Phúc",
+    "location": "Vĩnh Phúc"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC AN GIANG - ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH",
+    "location": "An Giang"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC ANH QUỐC - VIỆT NAM",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC BÀ RỊA - VŨNG TÀU",
+    "location": "Bà Rịa - Vũng Tàu"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC BẠC LIÊU",
+    "location": "Bạc Liêu"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC BÁCH KHOA, ĐẠI HỌC ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC BÌNH DƯƠNG",
+    "location": "Bình Dương"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CẦN THƠ",
+    "location": "Cần Thơ"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CMC",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ - ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ ĐỒNG NAI",
+    "location": "Đồng Nai"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ ĐÔNG Á",
+    "location": "Bắc Ninh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ GIAO THÔNG VẬN TẢI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ MIỀN ĐÔNG",
+    "location": "Đồng Nai"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ SÀI GÒN",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN - ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG VIỆT HÀN, ĐẠI HỌC ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG, ĐẠI HỌC THÁI NGUYÊN",
+    "location": "Thái Nguyên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ VÀ QUẢN LÝ HỮU NGHỊ",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ VẠN XUÂN",
+    "location": "Nghệ An"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP DỆT MAY HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP QUẢNG NINH",
+    "location": "Quảng Ninh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP VIỆT - HUNG",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP VIỆT TRÌ",
+    "location": "Phú Thọ"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP VINH",
+    "location": "Nghệ An"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CÔNG THƯƠNG TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CỬU LONG",
+    "location": "Vĩnh Long"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC CHU VĂN AN",
+    "location": "Hưng Yên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC DẦU KHÍ VIỆT NAM",
+    "location": "Bà Rịa - Vũng Tàu"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC DÂN LẬP PHƯƠNG ĐÔNG",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC DUY TÂN",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC DƯỢC HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC ĐÀ LẠT",
+    "location": "Lâm Đồng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC ĐẠI NAM",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC ĐIỆN LỰC",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC ĐIỀU DƯỠNG NAM ĐỊNH",
+    "location": "Nam Định"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC ĐỒNG NAI",
+    "location": "Đồng Nai"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC ĐỒNG THÁP",
+    "location": "Đồng Tháp"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC ĐÔNG Á",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC ĐÔNG ĐÔ",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC FPT",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC FULBRIGHT VIỆT NAM",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC GIA ĐỊNH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC GIÁO DỤC - ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HÀ HOA TIÊN",
+    "location": "Hà Nam"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HẠ LONG",
+    "location": "Quảng Ninh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HÀ TĨNH",
+    "location": "Hà Tĩnh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HẢI DƯƠNG",
+    "location": "Hải Dương"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HẢI PHÒNG",
+    "location": "Hải Phòng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HÀNG HẢI VIỆT NAM",
+    "location": "Hải Phòng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HOÀ BÌNH",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HOA LƯ",
+    "location": "Ninh Bình"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HOA SEN",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HỒNG ĐỨC",
+    "location": "Thanh Hóa"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HÙNG VƯƠNG",
+    "location": "Phú Thọ"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC HÙNG VƯƠNG - TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KIỂM SÁT HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KIẾN TRÚC ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KIẾN TRÚC HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KIẾN TRÚC TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KIÊN GIANG",
+    "location": "Kiên Giang"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH BẮC",
+    "location": "Bắc Ninh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH DOANH VÀ CÔNG NGHỆ HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ - CÔNG NGHỆ THÁI NGUYÊN",
+    "location": "Thái Nguyên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ - ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ - KỸ THUẬT BÌNH DƯƠNG",
+    "location": "Bình Dương"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ - LUẬT - ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ - TÀI CHÍNH TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ CÔNG NGHIỆP LONG AN",
+    "location": "Long An"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ KỸ THUẬT CÔNG NGHIỆP",
+    "location": "Nam Định"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ NGHỆ AN",
+    "location": "Nghệ An"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ VÀ QUẢN TRỊ KINH DOANH, ĐẠI HỌC THÁI NGUYÊN",
+    "location": "Thái Nguyên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ, ĐẠI HỌC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KỸ THUẬT - CÔNG NGHỆ CẦN THƠ",
+    "location": "Cần Thơ"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KỸ THUẬT CÔNG NGHIỆP, ĐẠI HỌC THÁI NGUYÊN",
+    "location": "Thái Nguyên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KỸ THUẬT Y - DƯỢC ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KỸ THUẬT Y TẾ HẢI DƯƠNG",
+    "location": "Hải Dương"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KHÁNH HOÀ",
+    "location": "Khánh Hoà"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN - ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN - ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KHOA HỌC VÀ CÔNG NGHỆ HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KHOA HỌC XÃ HỘI VÀ NHÂN VĂN - ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KHOA HỌC XÃ HỘI VÀ NHÂN VĂN - ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KHOA HỌC, ĐẠI HỌC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KHOA HỌC, ĐẠI HỌC THÁI NGUYÊN",
+    "location": "Thái Nguyên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC LẠC HỒNG",
+    "location": "Đồng Nai"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC LAO ĐỘNG - XÃ HỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC LÂM NGHIỆP",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC LUẬT - ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC LUẬT HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC LUẬT TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC LUẬT, ĐẠI HỌC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC LƯƠNG THẾ VINH",
+    "location": "Nam Định"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC MỎ - ĐỊA CHẤT",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC MỞ HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC MỞ TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC MỸ TẠI VIỆT NAM",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC MỸ THUẬT CÔNG NGHIỆP",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC MỸ THUẬT TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC MỸ THUẬT VIỆT NAM",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NAM CẦN THƠ",
+    "location": "Cần Thơ"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NỘI VỤ HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NÔNG LÂM BẮC GIANG",
+    "location": "Bắc Giang"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NÔNG LÂM TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NÔNG LÂM, ĐẠI HỌC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NÔNG LÂM, ĐẠI HỌC THÁI NGUYÊN",
+    "location": "Thái Nguyên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NGÂN HÀNG TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NGHỆ THUẬT, ĐẠI HỌC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NGOẠI NGỮ - ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NGOẠI NGỮ - TIN HỌC TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NGOẠI NGỮ, ĐẠI HỌC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NGOẠI THƯƠNG",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NGUYỄN TẤT THÀNH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NGUYỄN TRÃI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NHA TRANG",
+    "location": "Khánh Hoà"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC PHẠM VĂN ĐỒNG",
+    "location": "Quảng Ngãi"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC PHAN CHÂU TRINH",
+    "location": "Quảng Nam"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC PHAN THIẾT",
+    "location": "Bình Thuận"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC PHENIKAA",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC PHÚ XUÂN",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC PHÚ YÊN",
+    "location": "Phú Yên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUẢN LÝ VÀ CÔNG NGHỆ HẢI PHÒNG",
+    "location": "Hải Phòng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUẢN LÝ VÀ CÔNG NGHỆ TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUẢNG BÌNH",
+    "location": "Quảng Bình"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUẢNG NAM",
+    "location": "Quảng Nam"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUANG TRUNG",
+    "location": "Bình Định"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUỐC TẾ - ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUỐC TẾ BẮC HÀ",
+    "location": "Bắc Ninh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUỐC TẾ HỒNG BÀNG",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUỐC TẾ MIỀN ĐÔNG",
+    "location": "Bình Dương"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUỐC TẾ RMIT VIỆT NAM",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC QUY NHƠN",
+    "location": "Bình Định"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SÀI GÒN",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SAO ĐỎ",
+    "location": "Hải Dương"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SÂN KHẤU ĐIỆN ẢNH HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SÂN KHẤU, ĐIỆN ẢNH TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM HÀ NỘI 2",
+    "location": "Vĩnh Phúc"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HƯNG YÊN",
+    "location": "Hưng Yên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT NAM ĐỊNH",
+    "location": "Nam Định"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT VINH",
+    "location": "Nghệ An"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT VĨNH LONG",
+    "location": "Vĩnh Long"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM NGHỆ THUẬT TRUNG ƯƠNG",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM THỂ DỤC THỂ THAO HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM THỂ DỤC THỂ THAO TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM, ĐẠI HỌC ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM, ĐẠI HỌC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM, ĐẠI HỌC THÁI NGUYÊN",
+    "location": "Thái Nguyên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÀI CHÍNH - KẾ TOÁN",
+    "location": "Quảng Ngãi"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÀI CHÍNH - MARKETING",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÀI CHÍNH - NGÂN HÀNG HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÀI CHÍNH - QUẢN TRỊ KINH DOANH",
+    "location": "Hưng Yên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÀI NGUYÊN VÀ MÔI TRƯỜNG HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÀI NGUYÊN VÀ MÔI TRƯỜNG TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÂN TẠO",
+    "location": "Long An"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÂN TRÀO",
+    "location": "Tuyên Quang"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÂY BẮC",
+    "location": "Sơn La"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÂY ĐÔ",
+    "location": "Cần Thơ"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÂY NGUYÊN",
+    "location": "Đắk Lắk"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TIỀN GIANG",
+    "location": "Tiền Giang"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TÔN ĐỨC THẮNG",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TƯ THỤC QUỐC TẾ SÀI GÒN",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THÁI BÌNH",
+    "location": "Thái Bình"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THÁI BÌNH DƯƠNG",
+    "location": "Khánh Hoà"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THÀNH ĐÔ",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THÀNH ĐÔNG",
+    "location": "Hải Dương"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THĂNG LONG",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THỂ DỤC THỂ THAO BẮC NINH",
+    "location": "Bắc Ninh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THỂ DỤC THỂ THAO ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THỂ DỤC THỂ THAO TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THỦ DẦU MỘT",
+    "location": "Bình Dương"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THỦ ĐÔ HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THUỶ LỢI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC THƯƠNG MẠI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TRÀ VINH",
+    "location": "Trà Vinh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC TRƯNG VƯƠNG",
+    "location": "Vĩnh Phúc"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VĂN HIẾN",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VĂN HOÁ HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VĂN HOÁ TP. HỒ CHÍ MINH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VĂN HOÁ, THỂ THAO VÀ DU LỊCH THANH HOÁ",
+    "location": "Thanh Hóa"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VĂN LANG",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VIỆT ĐỨC",
+    "location": "Bình Dương"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VIỆT NHẬT - ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VINUNI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VINH",
+    "location": "Nghệ An"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC VÕ TRƯỜNG TOẢN",
+    "location": "Hậu Giang"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC XÂY DỰNG HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC XÂY DỰNG MIỀN TÂY",
+    "location": "Vĩnh Long"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC XÂY DỰNG MIỀN TRUNG",
+    "location": "Phú Yên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y DƯỢC - ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT",
+    "location": "Đắk Lắk"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y DƯỢC CẦN THƠ",
+    "location": "Cần Thơ"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y DƯỢC HẢI PHÒNG",
+    "location": "Hải Phòng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y DƯỢC THÁI BÌNH",
+    "location": "Thái Bình"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y DƯỢC, ĐẠI HỌC HUẾ",
+    "location": "Thừa Thiên Huế"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y DƯỢC, ĐẠI HỌC THÁI NGUYÊN",
+    "location": "Thái Nguyên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y HÀ NỘI",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y KHOA PHẠM NGỌC THẠCH",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y KHOA TOKYO VIỆT NAM",
+    "location": "Hưng Yên"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y KHOA VINH",
+    "location": "Nghệ An"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC Y TẾ CÔNG CỘNG",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC YERSIN ĐÀ LẠT",
+    "location": "Lâm Đồng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC KINH TẾ, ĐẠI HỌC ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC NGOẠI NGỮ, ĐẠI HỌC ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT, ĐẠI HỌC ĐÀ NẴNG",
+    "location": "Đà Nẵng"
+  },
+  {
+    "name": "Viện Công nghiệp thực phẩm",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Cơ điện Nông nghiệp và Công nghệ sau thu hoạch",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Chăn nuôi",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Chiến lược phát triển",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Dầu khí Việt Nam",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Dinh dưỡng",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Dược liệu",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Hoá học công nghiệp",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Kiểm nghiệm thuốc Trung ương",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Kiến trúc Quốc gia",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học công nghệ xây dựng",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học Địa chất và Khoáng sản",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học Đo đạc và Bản đồ",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học Giáo dục Việt nam",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học Khí tượng Thủy văn và Biến đổi khí hậu",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học Lâm nghiệp Việt Nam",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học Nông nghiệp Việt Nam",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học Thể dục thể thao",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học Thuỷ lợi Việt Nam",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Khoa học và Công nghệ Giao thông vận tải",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Máy và Dụng cụ công nghiệp",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Năng lượng nguyên tử Việt Nam",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Nghiên cứu Cơ khí",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Nghiên cứu Chiến lược, Chính sách Công Thương",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Nghiên cứu Điện tử, Tin học, Tự động hoá",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Nghiên cứu hải sản",
+    "location": "Hải Phòng"
+  },
+  {
+    "name": "Viện Nghiên cứu Nuôi trồng thuỷ sản I",
+    "location": "Bắc Ninh"
+  },
+  {
+    "name": "Viện Nghiên cứu quản lý kinh tế Trung ương",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Pasteur Thành phố Hồ Chí Minh",
+    "location": "TP. Hồ Chí Minh"
+  },
+  {
+    "name": "Viện Sốt rét - Ký sinh trùng - Côn trùng Trung ương",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Sức khoẻ nghề nghiệp và môi trường",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Toán học",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Thú y",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Ứng dụng Công nghệ",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Văn hoá Nghệ thuật quốc gia Việt Nam",
+    "location": "Hà Nội"
+  },
+  {
+    "name": "Viện Vệ sinh Dịch tễ Trung ương",
+    "location": "Hà Nội"
+  }
+]
