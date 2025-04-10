@@ -140,7 +140,7 @@ const validationSchema3 = Yup.object({
                         const monthDiff = today.getMonth() - birthDate.getMonth();
 
                         if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                            age--;
+                            age--;  
                         }
                         console.log('age:',age);
                         return age >= 1 && age <= 24;
@@ -160,7 +160,7 @@ const validationSchema3 = Yup.object({
 var values_tmp = null;
 function UserForm() {
     const waitTwoSeconds = async () => {
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise(resolve => setTimeout(resolve, 0));
     };
     const [step, setStep] = useState(1);
 
@@ -181,7 +181,7 @@ function UserForm() {
         } catch (error) {
             console.error('Lỗi khi gửi:', error.message);
         }
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 0));
         console.log('Submitted:', values);
     };
 

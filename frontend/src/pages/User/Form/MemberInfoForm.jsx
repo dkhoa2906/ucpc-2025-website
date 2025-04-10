@@ -51,7 +51,7 @@ function MemberInfoForm({ isUniversity }) {
               <div className=" mt-1">
                 
                   <ErrorMessage name={`members[${index}].fullName`}>
-                    {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                    {(msg) => <div className="text-red-500 text-sm mt-1 font-style: italic">{msg}</div>}
                   </ErrorMessage>
                 
               </div>
@@ -80,7 +80,7 @@ function MemberInfoForm({ isUniversity }) {
               {touched.members?.[index]?.email && (
               <div className=" mt-1">
                 <ErrorMessage name={`members[${index}].email`}>
-                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                  {(msg) => <div className="text-red-500 text-sm mt-1 font-style: italic">{msg}</div>}
                 </ErrorMessage>
               </div>
             )}  
@@ -133,7 +133,7 @@ function MemberInfoForm({ isUniversity }) {
               {touched.members?.[index]?.birth && (  
               <div className=" mt-1">
                 <ErrorMessage name={`members[${index}].birth`}>
-                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                  {(msg) => <div className="text-red-500 text-sm mt-1 font-style: italic">{msg}</div>}
                 </ErrorMessage>
               </div>
             )}
@@ -166,7 +166,7 @@ function MemberInfoForm({ isUniversity }) {
                 <div className=" mt-1">
                   
                   <ErrorMessage name={`members[${index}].university`}>
-                    {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                    {(msg) => <div className="text-red-500 text-sm mt-1 font-style: italic">{msg}</div>}
                   </ErrorMessage>
                 </div>
               )}
@@ -194,7 +194,7 @@ function MemberInfoForm({ isUniversity }) {
               <div className=" mt-1">
                 
                 <ErrorMessage name={`members[${index}].studentId`}>
-                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                  {(msg) => <div className="text-red-500 text-sm mt-1 font-style: italic">{msg}</div>}
                 </ErrorMessage>
               </div>
             )}
