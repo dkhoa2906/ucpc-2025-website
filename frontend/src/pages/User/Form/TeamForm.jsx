@@ -1,12 +1,12 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
-
+import * as Yup from 'yup';
+import { ErrorMessage } from 'formik';
 
 // Một component bao bọc react-select để tích hợp với Formik
 
 
 function TeamForm() {
-
 
   return (
     <div className='w-full gap-3 space-y-5'>
@@ -21,6 +21,9 @@ function TeamForm() {
           name="teamName"
           className="w-full border border-gray-300 rounded px-3 py-2 bg-white focus:ring-2 focus:ring-pink-400 focus:outline-none transition"
         />
+        <ErrorMessage name={'teamName'}>
+          {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+        </ErrorMessage>
       </div>
 
 
@@ -34,6 +37,9 @@ function TeamForm() {
           name="instructor"
           className="w-full border border-gray-300 rounded px-3 py-2 bg-white focus:ring-2 focus:ring-pink-400 focus:outline-none transition"
         />
+        <ErrorMessage name={'instructor'}>
+          {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+        </ErrorMessage>
       </div>
 
 
@@ -53,6 +59,9 @@ function TeamForm() {
           <option value="highschool">Trung học</option>
           <option value="university">Đại học</option>
         </Field>
+        <ErrorMessage name={'level'}>
+          {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+        </ErrorMessage>
       </div>
 
 

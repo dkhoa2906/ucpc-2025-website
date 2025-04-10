@@ -1,12 +1,13 @@
-import { Field, useFormikContext } from 'formik';
+import { Field, useFormikContext, ErrorMessage } from 'formik';
 import React, { useEffect, useState } from 'react';
 import Universities from './UniversitySelect';
-
+var values_tmp = null;
 function MemberInfoForm({ isUniversity }) {
+
   const { values } = useFormikContext();
-
   const [universityList, setUniversityList] = useState([]);
-
+  values_tmp = values;
+  console.log('values -> ', values_tmp);
   useEffect(() => {
     if (isUniversity) {
       fetch('./data/university_names.json')
@@ -43,6 +44,9 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 hover:border-pink-400 focus:ring-2 focus:ring-pink-400 transition"
               />
+              <ErrorMessage name={`members[${index}].fullName`}>
+                {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+              </ErrorMessage>
               <label
                 htmlFor={`members[${index}].fullName`}
                 className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -51,6 +55,7 @@ function MemberInfoForm({ isUniversity }) {
               >
                 Họ và tên
               </label>
+
             </div>
 
             {/* Email */}
@@ -62,6 +67,9 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
               />
+              <ErrorMessage name={`members[${index}].email`}>
+                {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+              </ErrorMessage>
               <label
                 htmlFor={`members[${index}].email`}
                 className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -81,6 +89,9 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
               />
+              <ErrorMessage name={`members[${index}].phone`}>
+                {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+              </ErrorMessage>
               <label
                 htmlFor={`members[${index}].phone`}
                 className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -100,6 +111,9 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               />
+              <ErrorMessage name={`members[${index}].birth`}>
+                {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+              </ErrorMessage>
               <label
                 htmlFor={`members[${index}].birth`}
                 className="absolute left-3 top-1 text-sm text-gray-500 bg-white px-1
@@ -125,6 +139,9 @@ function MemberInfoForm({ isUniversity }) {
                   placeholder=" "
                   className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
                 />
+                <ErrorMessage name={`members[${index}].university`}>
+                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                </ErrorMessage>
                 <label
                   htmlFor={`members[${index}].university`}
                   className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -145,6 +162,9 @@ function MemberInfoForm({ isUniversity }) {
                   placeholder=" "
                   className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
                 />
+                <ErrorMessage name={`members[${index}].phone`}>
+                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                </ErrorMessage>
                 <label
                   htmlFor={`members[${index}].studentId`}
                   className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -162,5 +182,7 @@ function MemberInfoForm({ isUniversity }) {
     </div>
   );
 }
+
+console.log('values_tmp 2-> ', values_tmp);
 
 export default MemberInfoForm;
