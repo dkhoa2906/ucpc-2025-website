@@ -27,7 +27,7 @@ function MemberInfoForm({ isUniversity }) {
   }, [isUniversity]);
   return (
     <div className=" w-full">
-      <h2 className="text-gray-700 text-3xl font-bold mb-4 text-center">Thông tin các thành viên</h2>
+      <h2 className="text-gray-300 text-3xl font-bold mb-4 text-center">Thông tin các thành viên</h2>
       <div className="flex flex-row flex-wrap gap-20 justify-center w-full">
         {values.members.map((_, index) => (
           <div
@@ -37,16 +37,18 @@ function MemberInfoForm({ isUniversity }) {
             <h2 className="font-semibold text-xl mb-1 text-center">Thành viên {index + 1}</h2>
 
             {/* Họ và tên */}
-            <div className="relative mt-4">
+            <div className="relative mt-1">
               <Field
                 id={`members[${index}].fullName`}
                 name={`members[${index}].fullName`}
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 hover:border-pink-400 focus:ring-2 focus:ring-pink-400 transition"
               />
-              <ErrorMessage name={`members[${index}].fullName`}>
-                {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
-              </ErrorMessage>
+              <div className="h-5 mt-1">
+                <ErrorMessage name={`members[${index}].fullName`}>
+                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                </ErrorMessage>
+              </div>
               <label
                 htmlFor={`members[${index}].fullName`}
                 className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -59,7 +61,7 @@ function MemberInfoForm({ isUniversity }) {
             </div>
 
             {/* Email */}
-            <div className="relative mt-4">
+            <div className="relative mt-1">
               <Field
                 id={`members[${index}].email`}
                 name={`members[${index}].email`}
@@ -67,9 +69,11 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
               />
-              <ErrorMessage name={`members[${index}].email`}>
-                {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
-              </ErrorMessage>
+              <div className="h-5 mt-1">
+                <ErrorMessage name={`members[${index}].email`}>
+                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                </ErrorMessage>
+              </div>
               <label
                 htmlFor={`members[${index}].email`}
                 className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -81,7 +85,7 @@ function MemberInfoForm({ isUniversity }) {
             </div>
 
             {/* Số điện thoại */}
-            <div className="relative mt-4">
+            <div className="relative mt-1">
               <Field
                 id={`members[${index}].phone`}
                 name={`members[${index}].phone`}
@@ -89,9 +93,11 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
               />
-              <ErrorMessage name={`members[${index}].phone`}>
-                {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
-              </ErrorMessage>
+              <div className="h-5 mt-1">
+                <ErrorMessage name={`members[${index}].phone`}>
+                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                </ErrorMessage>
+              </div>
               <label
                 htmlFor={`members[${index}].phone`}
                 className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -103,7 +109,7 @@ function MemberInfoForm({ isUniversity }) {
             </div>
 
             {/* Ngày sinh */}
-            <div className="relative mt-4">
+            <div className="relative mt-1">
               <Field
                 id={`members[${index}].birth`}
                 name={`members[${index}].birth`}
@@ -111,9 +117,11 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               />
-              <ErrorMessage name={`members[${index}].birth`}>
-                {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
-              </ErrorMessage>
+              <div className="h-5 mt-1">
+                <ErrorMessage name={`members[${index}].birth`}>
+                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                </ErrorMessage>
+              </div>
               <label
                 htmlFor={`members[${index}].birth`}
                 className="absolute left-3 top-1 text-sm text-gray-500 bg-white px-1
@@ -132,16 +140,18 @@ function MemberInfoForm({ isUniversity }) {
                 options={universityList}
               />
             ) : (
-              <div className="relative mt-4">
+              <div className="relative mt-1">
                 <Field
                   id={`members[${index}].university`}
                   name={`members[${index}].university`}
                   placeholder=" "
                   className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
                 />
-                <ErrorMessage name={`members[${index}].university`}>
-                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
-                </ErrorMessage>
+                <div className="h-5 mt-1">
+                  <ErrorMessage name={`members[${index}].university`}>
+                    {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                  </ErrorMessage>
+                </div>
                 <label
                   htmlFor={`members[${index}].university`}
                   className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -154,17 +164,19 @@ function MemberInfoForm({ isUniversity }) {
             )}
 
             {/* MSSV/CCCD */}
-            {isUniversity && (
-              <div className="relative mt-4">
+          
+              <div className="relative mt-1">
                 <Field
                   id={`members[${index}].studentId`}
                   name={`members[${index}].studentId`}
                   placeholder=" "
                   className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
                 />
-                <ErrorMessage name={`members[${index}].phone`}>
-                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
-                </ErrorMessage>
+                <div className="h-5 mt-1">
+                  <ErrorMessage name={`members[${index}].phone`}>
+                    {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                  </ErrorMessage>
+                </div>
                 <label
                   htmlFor={`members[${index}].studentId`}
                   className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -174,7 +186,7 @@ function MemberInfoForm({ isUniversity }) {
                   MSSV/CCCD
                 </label>
               </div>
-            )}
+          
 
           </div>
         ))}

@@ -11,8 +11,7 @@ const validationSchema = Yup.object({
         .required("Họ và tên người hướng dẫn là bắt buộc.")
         .matches(
             /^([A-ZÀ-Ỹ][a-zà-ỹ]*)(\s[A-ZÀ-Ỹ][a-zà-ỹ]*)*$/,
-            "Mỗi từ trong họ và tên phải viết hoa chữ cái đầu (kể cả có dấu)."
-        ),
+            "Ghi họ tên theo định dạng, Ví dụ: Nguyễn Văn A"),
     level: Yup.string()
         .oneOf(["highschool", "university"], "Cấp độ không hợp lệ.") // Chỉ cho phép chọn "Trung học" hoặc "Đại học"
         .required("Cấp độ là bắt buộc."),
@@ -26,8 +25,7 @@ const validationSchema2 = Yup.object({
                     .required("Họ và tên là bắt buộc.")
                     .matches(
                         /^([A-ZÀ-Ỹ][a-zà-ỹ]*)(\s[A-ZÀ-Ỹ][a-zà-ỹ]*)*$/,
-                        "Mỗi từ trong họ và tên phải viết hoa chữ cái đầu (kể cả có dấu)."
-                    ),
+                        "Ghi họ tên theo định dạng, Ví dụ: Nguyễn Văn A"),
 
                 email: Yup.string()
                     .required("Email là bắt buộc")
@@ -94,8 +92,7 @@ const validationSchema3 = Yup.object({
                     .required("Họ và tên là bắt buộc.")
                     .matches(
                         /^([A-ZÀ-Ỹ][a-zà-ỹ]*)(\s[A-ZÀ-Ỹ][a-zà-ỹ]*)*$/,
-                        "Mỗi từ trong họ và tên phải viết hoa chữ cái đầu (kể cả có dấu)."
-                    ),
+                        "Ghi họ tên theo định dạng, Ví dụ: Nguyễn Văn A"),
                 email: Yup.string()
                     .required("Email là bắt buộc")
                     .email("Email không hợp lệ"),
@@ -152,9 +149,28 @@ const validationSchema3 = Yup.object({
 
 var values_tmp = null;
 function UserForm() {
+    const waitTwoSeconds = async () => {
+        await new Promise(resolve => setTimeout(resolve, 2000));
+    };
     const [step, setStep] = useState(1);
 
     const handleSubmit = async (values) => {
+        try {
+            const response = await fetch('http://localhost:8080/api/v1/update-info', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(values)  // có thể là values từ bước 2
+            });
+
+            if (!response.ok) throw new Error('Lỗi khi gửi dữ liệu');
+
+            const result = await response.json();
+            console.log('Gửi thành công:', result);
+        } catch (error) {
+            console.error('Lỗi khi gửi:', error.message);
+        }
         await new Promise((resolve) => setTimeout(resolve, 2000));
         console.log('Submitted:', values);
     };
@@ -171,22 +187,28 @@ function UserForm() {
                     { fullName: '', email: '', phone: '', birth: '', university: '', studentId: '' }
                 ]
             }}
+
             validationSchema={step === 1 ? validationSchema : (values_tmp.level === "highschool" ? validationSchema2 : validationSchema3)}
-            onSubmit={(values, { setSubmitting }) => {
+            onSubmit={async (values, { setSubmitting }) => {
                 if (step === 1) {
                     console.log('Step 1:', values);
                     values_tmp = values;
+                    await waitTwoSeconds();
                     setStep(2);
                     setSubmitting(false);
                 } else {
                     console.log('Step 2:', values_tmp, values);
                     values_tmp = values;
-                    handleSubmit(values).finally(() => setSubmitting(false));
+                    try {
+                        await handleSubmit(values);
+                    } finally {
+                        setSubmitting(false);
+                    }
                 }
             }}
         >
             {({ isSubmitting, values }) => (
-                <Form className={` rounded-xl shadow-lg flex flex-col gap-3 items-center justify-center backdrop-blur-md w-full ${step === 1 ? 'rounded-md max-w-md h-130 my-12' : 'border-none max-w-full h-screen bg-no'
+                <Form className={`  select-none flex flex-col gap-3 items-center justify-center backdrop-blur-md w-full ${step === 1 ? 'rounded-xl max-w-md h-130 my-12 border-none' : 'border-none max-w-full h-screen bg-no'
                     } mx-auto border-2 bg-white/40  px-5 py-6`}>
                     {step === 1 && (
                         <>
@@ -196,13 +218,14 @@ function UserForm() {
                                     type="submit"
                                     disabled={isSubmitting}
                                     className={`
-              mt-4 w-full bg-[#770549] hover:bg-[#8b2366] text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300
+              mt-4 w-full bg-[#770549] hover:bg-[#8b2366] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl shadow-md 
+              transition duration-400 
                     ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}
                   `}
                                 >
                                     {isSubmitting ? (
                                         <>
-                                            <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                                            <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
                                             <span>Đang xử lý...</span>
                                         </>
                                     ) : (
@@ -224,13 +247,13 @@ function UserForm() {
                                     type="submit"
                                     disabled={isSubmitting}
                                     className={`
-                    mt-4 w-full bg-[#770549] hover:bg-[#8b2366] text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300
+                    mt-4 w-full bg-[#770549] hover:bg-[#8b2366] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300
                     ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}
                   `}
                                 >
                                     {isSubmitting ? (
                                         <>
-                                            <span className="w-4 h-4 border-2 text-gray-800 border-t-transparent rounded-full animate-spin"></span>
+                                            <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
                                             <span>Đang đăng kí...</span>
                                         </>
                                     ) : (
