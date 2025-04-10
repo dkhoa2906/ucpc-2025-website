@@ -1,10 +1,13 @@
 import { Field, useFormikContext, ErrorMessage } from 'formik';
 import React, { useEffect, useState } from 'react';
 import Universities from './UniversitySelect';
+
+
+
 var values_tmp = null;
 function MemberInfoForm({ isUniversity }) {
-
-  const { values } = useFormikContext();
+  
+  const { values, touched } = useFormikContext();
   const [universityList, setUniversityList] = useState([]);
   values_tmp = values;
   console.log('values -> ', values_tmp);
@@ -44,11 +47,16 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 hover:border-pink-400 focus:ring-2 focus:ring-pink-400 transition"
               />
-              <div className="h-5 mt-1">
-                <ErrorMessage name={`members[${index}].fullName`}>
-                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
-                </ErrorMessage>
+              {touched.members?.[index]?.fullName && (
+              <div className=" mt-1">
+                
+                  <ErrorMessage name={`members[${index}].fullName`}>
+                    {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                  </ErrorMessage>
+                
               </div>
+            )}
+
               <label
                 htmlFor={`members[${index}].fullName`}
                 className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -69,11 +77,13 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
               />
-              <div className="h-5 mt-1">
+              {touched.members?.[index]?.email && (
+              <div className=" mt-1">
                 <ErrorMessage name={`members[${index}].email`}>
                   {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
                 </ErrorMessage>
               </div>
+            )}  
               <label
                 htmlFor={`members[${index}].email`}
                 className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -93,11 +103,14 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
               />
-              <div className="h-5 mt-1">
+              {touched.members?.[index]?.phone && (
+              <div className=" mt-1">
                 <ErrorMessage name={`members[${index}].phone`}>
                   {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
                 </ErrorMessage>
+                
               </div>
+            )}
               <label
                 htmlFor={`members[${index}].phone`}
                 className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -117,11 +130,13 @@ function MemberInfoForm({ isUniversity }) {
                 placeholder=" "
                 className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               />
-              <div className="h-5 mt-1">
+              {touched.members?.[index]?.birth && (  
+              <div className=" mt-1">
                 <ErrorMessage name={`members[${index}].birth`}>
                   {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
                 </ErrorMessage>
               </div>
+            )}
               <label
                 htmlFor={`members[${index}].birth`}
                 className="absolute left-3 top-1 text-sm text-gray-500 bg-white px-1
@@ -147,11 +162,14 @@ function MemberInfoForm({ isUniversity }) {
                   placeholder=" "
                   className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
                 />
-                <div className="h-5 mt-1">
+                {touched.members?.[index]?.university && (
+                <div className=" mt-1">
+                  
                   <ErrorMessage name={`members[${index}].university`}>
                     {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
                   </ErrorMessage>
                 </div>
+              )}
                 <label
                   htmlFor={`members[${index}].university`}
                   className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
@@ -164,29 +182,32 @@ function MemberInfoForm({ isUniversity }) {
             )}
 
             {/* MSSV/CCCD */}
-          
-              <div className="relative mt-1">
-                <Field
-                  id={`members[${index}].studentId`}
-                  name={`members[${index}].studentId`}
-                  placeholder=" "
-                  className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
-                />
-                <div className="h-5 mt-1">
-                  <ErrorMessage name={`members[${index}].phone`}>
-                    {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
-                  </ErrorMessage>
-                </div>
-                <label
-                  htmlFor={`members[${index}].studentId`}
-                  className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
+
+            <div className="relative mt-1">
+              <Field
+                id={`members[${index}].studentId`}
+                name={`members[${index}].studentId`}
+                placeholder=" "
+                className="peer w-full border border-gray-300  rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-pink-400 transition"
+              />
+              {touched.members?.[index]?.studentId && (
+              <div className=" mt-1">
+                
+                <ErrorMessage name={`members[${index}].studentId`}>
+                  {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                </ErrorMessage>
+              </div>
+            )}
+              <label
+                htmlFor={`members[${index}].studentId`}
+                className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
         peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
         peer-focus:top-1 peer-focus:text-sm peer-focus:text-pink-400"
-                >
-                  MSSV/CCCD
-                </label>
-              </div>
-          
+              >
+                MSSV/CCCD
+              </label>
+            </div>
+
 
           </div>
         ))}

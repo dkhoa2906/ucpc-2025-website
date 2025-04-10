@@ -3,15 +3,14 @@ import TeamForm from './TeamForm';
 import MemberInfoForm from './MemberInfoForm';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
+
+
 const validationSchema = Yup.object({
     teamName: Yup.string()
-        .matches(/^[A-Z]/, "Chữ cái đầu tiên phải viết hoa")
-        .required("Tên đội là bắt buộc."),
+        .required("Tên đội là bắt buộc."),  //không có regex vì không cần thiết
     instructor: Yup.string()
-        .required("Họ và tên người hướng dẫn là bắt buộc.")
-        .matches(
-            /^([A-ZÀ-Ỹ][a-zà-ỹ]*)(\s[A-ZÀ-Ỹ][a-zà-ỹ]*)*$/,
-            "Ghi họ tên theo định dạng, Ví dụ: Nguyễn Văn A"),
+        .required("Họ và tên người hướng dẫn là bắt buộc.") // Không được để trống
+        .matches(/^([A-ZÀ-Ỹ][a-zà-ỹ]*)(\s[A-ZÀ-Ỹ][a-zà-ỹ]*)*$/, "Ghi họ tên theo định dạng, Ví dụ: Nguyễn Văn A"),
     level: Yup.string()
         .oneOf(["highschool", "university"], "Cấp độ không hợp lệ.") // Chỉ cho phép chọn "Trung học" hoặc "Đại học"
         .required("Cấp độ là bắt buộc."),
@@ -28,11 +27,13 @@ const validationSchema2 = Yup.object({
                         "Ghi họ tên theo định dạng, Ví dụ: Nguyễn Văn A"),
 
                 email: Yup.string()
-                    .required("Email là bắt buộc")
+                    .required("Email là bắt buộc.")
                     .email("Email không hợp lệ"),
+
                 phone: Yup.string()
                     .matches(/^\d{10}$/, "Số điện thoại cần có 10 số")
-                    .required("Số điện thoại là bắt buộc"),
+                    .required("Số điện thoại là bắt buộc."),
+
                 // birth: Yup.date()
                 // .matches(/^\d{2}\/\d{2}\/\d{4}$/, "Ngày sinh không hợp lệ. Định dạng: dd/mm/yyyy")
                 // .required("Ngày sinh là bắt buộc."),
@@ -56,10 +57,14 @@ const validationSchema2 = Yup.object({
 
                 birth: Yup.date()
                     .required("Ngày sinh là bắt buộc.")
-                    .test("ageMax", "Tuổi phải nhỏ hơn hoặc bằng 24.", (value) => {
+                    .test("ageValid", "Ngày tháng năm sinh không hợp lệ.", (value) => {
                         if (!value) return false;
 
                         const today = new Date();
+
+                        // Không cho ngày sinh trong tương lai
+                        if (value > today) return false;
+
                         let age = today.getFullYear() - value.getFullYear();
                         const monthDiff = today.getMonth() - value.getMonth();
 
@@ -67,7 +72,7 @@ const validationSchema2 = Yup.object({
                             age--;
                         }
 
-                        return age <= 24;
+                        return age >= 1 && age <= 24;
                     }),
 
 
@@ -77,7 +82,8 @@ const validationSchema2 = Yup.object({
                         "Tên trường không hợp lệ. Viết đúng format ví dụ: Trường THPT/THCS <tên trường>"
                     )
                     .required("Trường học là bắt buộc."),
-                studentId: Yup.string().required("Mã số sinh viên là bắt buộc"),
+                studentId: 
+                Yup.string().required("Mã số sinh viên là bắt buộc."),
             })
         )
         .min(3, "Phải có ít nhất 3 thành viên")
@@ -94,11 +100,11 @@ const validationSchema3 = Yup.object({
                         /^([A-ZÀ-Ỹ][a-zà-ỹ]*)(\s[A-ZÀ-Ỹ][a-zà-ỹ]*)*$/,
                         "Ghi họ tên theo định dạng, Ví dụ: Nguyễn Văn A"),
                 email: Yup.string()
-                    .required("Email là bắt buộc")
+                    .required("Email là bắt buộc.")
                     .email("Email không hợp lệ"),
                 phone: Yup.string()
                     .matches(/^\d{10}$/, "Số điện thoại cần có 10 số")
-                    .required("Số điện thoại là bắt buộc"),
+                    .required("Số điện thoại là bắt buộc."),
                 //   birth: Yup.date()
                 //   .matches(/^\d{2}\/\d{2}\/\d{4}$/, "Ngày sinh không hợp lệ. Định dạng: dd/mm/yyyy")
                 //   .required("Ngày sinh là bắt buộc."),
@@ -120,26 +126,30 @@ const validationSchema3 = Yup.object({
                 //     return age <= 24;
                 //   }),
 
-                birth: Yup.date()
+                birth: Yup.string()
                     .required("Ngày sinh là bắt buộc.")
-                    .test("ageMax", "Tuổi phải nhỏ hơn hoặc bằng 24.", (value) => {
+                    .test("ageValid", "Ngày tháng năm sinh không hợp lệ.", (value) => {
                         if (!value) return false;
 
+                        const birthDate = new Date(value); // ISO string => Date
                         const today = new Date();
-                        let age = today.getFullYear() - value.getFullYear();
-                        const monthDiff = today.getMonth() - value.getMonth();
 
-                        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < value.getDate())) {
+                        if (birthDate > today) return false;
+
+                        let age = today.getFullYear() - birthDate.getFullYear();
+                        const monthDiff = today.getMonth() - birthDate.getMonth();
+
+                        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
                             age--;
                         }
-
-                        return age <= 24;
+                        console.log('age:',age);
+                        return age >= 1 && age <= 24;
                     }),
 
 
-                university: Yup.string().required("Tên học là bắt buộc"),
+                university: Yup.string().required("Tên học là bắt buộc."),
 
-                studentId: Yup.string().required("Mã số sinh viên là bắt buộc"),
+                studentId: Yup.string().required("Mã số sinh viên là bắt buộc."),
             })
         )
         .min(3, "Phải có ít nhất 3 thành viên")
@@ -189,11 +199,12 @@ function UserForm() {
             }}
 
             validationSchema={step === 1 ? validationSchema : (values_tmp.level === "highschool" ? validationSchema2 : validationSchema3)}
-            onSubmit={async (values, { setSubmitting }) => {
+            onSubmit={async (values, { setSubmitting, setTouched }) => {
                 if (step === 1) {
                     console.log('Step 1:', values);
                     values_tmp = values;
                     await waitTwoSeconds();
+                    setTouched({});
                     setStep(2);
                     setSubmitting(false);
                 } else {
@@ -205,10 +216,13 @@ function UserForm() {
                         setSubmitting(false);
                     }
                 }
+
             }}
+            validateOnBlur={true}
+            validateOnChange={true}
         >
             {({ isSubmitting, values }) => (
-                <Form className={`  select-none flex flex-col gap-3 items-center justify-center backdrop-blur-md w-full ${step === 1 ? 'rounded-xl max-w-md h-130 my-12 border-none' : 'border-none max-w-full h-screen bg-no'
+                <Form className={`  select-none flex flex-col gap-0 items-center justify-center backdrop-blur-md w-full ${step === 1 ? 'rounded-xl max-w-md h-150 my-12 border-none' : 'border-none max-w-full h-screen bg-no'
                     } mx-auto border-2 bg-white/40  px-5 py-6`}>
                     {step === 1 && (
                         <>
@@ -218,7 +232,7 @@ function UserForm() {
                                     type="submit"
                                     disabled={isSubmitting}
                                     className={`
-              mt-4 w-full bg-[#770549] hover:bg-[#8b2366] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl shadow-md 
+              mt-0 w-full bg-[#770549] hover:bg-[#8b2366] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl shadow-md 
               transition duration-400 
                     ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}
                   `}
