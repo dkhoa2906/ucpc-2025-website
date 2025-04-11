@@ -3,7 +3,6 @@ import TeamForm from "./TeamForm";
 import MemberInfoForm from "./MemberInfoForm";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import puzzle_background from "../../../assets/puzzle_background.png";
 
 const validationSchema = Yup.object({
   teamName: Yup.string().required("Tên đội là bắt buộc."), //không có regex vì không cần thiết
@@ -285,10 +284,10 @@ function UserForm() {
                   {isSubmitting ? (
                     <>
                       <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
-                      <span>Đang xử lý...</span>
+                      <span className = "text-lg">Đang xử lý...</span>
                     </>
                   ) : (
-                    <span>Tiếp tục</span>
+                    <span className = "text-lg">Tiếp tục</span>
                   )}
                 </button>
               </div>
@@ -303,17 +302,17 @@ function UserForm() {
                   type="submit"
                   disabled={isSubmitting}
                   className={`
-                    mt-4 w-full bg-[#770549] hover:bg-[#8b2366] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300
+                    mt-4 w-full bg-[#8A0651] hover:bg-[#AD2971] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-200
                     ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}
                   `}
                 >
                   {isSubmitting ? (
                     <>
                       <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
-                      <span>Đang đăng kí...</span>
+                      <span className = "text-lg">Đang đăng kí...</span>
                     </>
                   ) : (
-                    <span>Đăng kí</span>
+                    <span className = "text-lg">Đăng kí</span>
                   )}
                 </button>
               </div>
