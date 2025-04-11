@@ -8,12 +8,18 @@ import * as Yup from 'yup';
 const validationSchema = Yup.object({
     teamName: Yup.string()
         .required("Tên đội là bắt buộc."),  //không có regex vì không cần thiết
-    instructor: Yup.string()
+    instructorName: Yup.string()
         .required("Họ và tên người hướng dẫn là bắt buộc.") // Không được để trống
         .matches(/^([A-ZÀ-Ỹ][a-zà-ỹ]*)(\s[A-ZÀ-Ỹ][a-zà-ỹ]*)*$/, "Ghi họ tên theo định dạng, Ví dụ: Nguyễn Văn A"),
     level: Yup.string()
         .oneOf(["highschool", "university"], "Cấp độ không hợp lệ.") // Chỉ cho phép chọn "Trung học" hoặc "Đại học"
         .required("Cấp độ là bắt buộc."),
+    instructorEmail: Yup.string()
+        .required("Email là bắt buộc.")
+        .email("Email không hợp lệ"),
+    instructorPhone: Yup.string()
+        .matches(/^\d{10}$/, "Số điện thoại cần có 10 số")
+        .required("Số điện thoại là bắt buộc."),
 });// Định nghĩa schema cho bước 1
 
 const validationSchema2 = Yup.object({
@@ -82,8 +88,10 @@ const validationSchema2 = Yup.object({
                         "Tên trường không hợp lệ. Viết đúng format ví dụ: Trường THPT/THCS <tên trường>"
                     )
                     .required("Trường học là bắt buộc."),
-                studentId: 
-                Yup.string().required("Mã số sinh viên là bắt buộc."),
+                studentId:
+                    Yup.string()
+                    .required("Mã số sinh viên là bắt buộc."),
+
             })
         )
         .min(3, "Phải có ít nhất 3 thành viên")
@@ -140,9 +148,9 @@ const validationSchema3 = Yup.object({
                         const monthDiff = today.getMonth() - birthDate.getMonth();
 
                         if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                            age--;  
+                            age--;
                         }
-                        console.log('age:',age);
+                        console.log('age:', age);
                         return age >= 1 && age <= 24;
                     }),
 
@@ -189,7 +197,9 @@ function UserForm() {
         <Formik
             initialValues={{
                 teamName: '',
-                instructor: '',
+                instructorName: '',
+                instructorEmail: '',
+                instructorPhone: '',
                 level: '',
                 members: [
                     { fullName: '', email: '', phone: '', birth: '', university: '', studentId: '' },
@@ -222,7 +232,7 @@ function UserForm() {
             validateOnChange={true}
         >
             {({ isSubmitting, values }) => (
-                <Form className={`  select-none flex flex-col gap-0 items-center justify-center backdrop-blur-md w-full ${step === 1 ? 'rounded-xl max-w-md h-150 my-12 border-none' : 'border-none max-w-full h-screen bg-no'
+                <Form className={`  select-none flex flex-col gap-0 items-center justify-center backdrop-blur-md w-full ${step === 1 ? 'rounded-xl max-w-md h-150 my-12 border-none' : 'border-none h-screen bg-no'
                     } mx-auto border-2 bg-white/40  px-5 py-6`}>
                     {step === 1 && (
                         <>
