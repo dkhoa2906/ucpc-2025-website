@@ -4,3 +4,9 @@
     margin: 0;
     padding: 0;
 }
+.overlay-blur {
+  background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.4), transparent 40%),
+              radial-gradient(circle at top right, rgba(0, 0, 0, 0.4), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.4), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.4), transparent 40%);
+}
