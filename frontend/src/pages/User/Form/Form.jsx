@@ -92,10 +92,11 @@ const validationSchema2 = Yup.object({
             "Tên trường không hợp lệ. Viết đúng format ví dụ: Trường THPT/THCS <tên trường>"
           )
           .required("Trường học là bắt buộc."),
-        studentId: Yup.string().required("Mã số sinh viên là bắt buộc."),
+        CCCD: Yup.string().required("CCCD là bắt buộc."),
+        
       })
     )
-    .min(3, "Phải có ít nhất 3 thành viên")
+    .min(3, "Phải có đúng 3 thành viên")
     .max(3, "Phải có đúng 3 thành viên"),
 });
 // Validation schema cho trường hợp không là đại học
@@ -161,7 +162,8 @@ const validationSchema3 = Yup.object({
 
         university: Yup.string().required("Tên học là bắt buộc."),
 
-        studentId: Yup.string().required("Mã số sinh viên là bắt buộc."),
+        studentId: Yup.string().required("MSSV là bắt buộc."),
+        CCCD: Yup.string().required("CCCD là bắt buộc."),
       })
     )
     .min(3, "Phải có ít nhất 3 thành viên")
@@ -213,6 +215,7 @@ function  UserForm() {
             birth: "",
             university: "",
             studentId: "",
+            CCCD: "",
           },
           {
             fullName: "",
@@ -221,6 +224,7 @@ function  UserForm() {
             birth: "",
             university: "",
             studentId: "",
+            CCCD: "",
           },
           {
             fullName: "",
@@ -229,6 +233,7 @@ function  UserForm() {
             birth: "",
             university: "",
             studentId: "",
+            CCCD: "",
           },
         ],
       }}
@@ -262,11 +267,11 @@ function  UserForm() {
     >
       {({ isSubmitting, values }) => (
         <Form
-          className={` font-bevietnam select-none flex flex-col gap-0 items-center justify-center w-full ${
+          className={`font-bevietnam select-none flex flex-col gap-0 items-center justify-center w-full ${
             step === 1
-              ? " backdrop-blur-xl max-w-md h-150 my-12 border-none rounded-xl bg-[#EDEAD2] shadow-xl ring-1 ring-white/10"
+              ? " backdrop-blur-xl max-w-lg h-150 my-12 border-none rounded-xl bg-[#EDEAD2] shadow-xl ring-1 ring-white/10"
               : "border-none bg-transparent "
-          } mx-auto border-2   px-5 py-6`}
+          } mx-auto border-2   px-10 py-6`}
         >
          
           {step === 1 && (

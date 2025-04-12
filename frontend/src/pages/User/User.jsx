@@ -6,9 +6,9 @@ function User() {
     
     <div
       style={{ backgroundImage: `url(${mountain})` }}
-      className="relative h-screen w-screen overflow-hidden bg-[#5C235B] flex items-center justify-center "
+      className="relative h-screen bg-[length:100%] w-full overflow-hidden flex items-center justify-center "
     >
-      <div className="absolute inset-0 pointer-events-none z-10 overlay-blur"></div>
+      
       <div className="relative z-20">
         <UserForm />
       </div>
