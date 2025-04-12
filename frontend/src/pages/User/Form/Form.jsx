@@ -14,13 +14,13 @@ const validationSchema = Yup.object({
     ),
   level: Yup.string()
     .oneOf(["highschool", "university"], "Cấp độ không hợp lệ.") // Chỉ cho phép chọn "Trung học" hoặc "Đại học"
-    .required("Cấp độ là bắt buộc."),
+    .required("Phần bắt buộc."),
   instructorEmail: Yup.string()
     .required("Email là bắt buộc.")
     .email("Email không hợp lệ"),
   instructorPhone: Yup.string()
     .matches(/^\d{10}$/, "Số điện thoại cần có 10 số")
-    .required("Số điện thoại là bắt buộc."),
+    .required("SĐT là bắt buộc."),
 }); // Định nghĩa schema cho bước 1
 
 const validationSchema2 = Yup.object({
@@ -88,7 +88,7 @@ const validationSchema2 = Yup.object({
 
         university: Yup.string()
           .matches(
-            /^Trường (THPT|THCS) [A-Za-zÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯàáâãèéêìíòóôõùúăđĩũơưẠ-ỹ\s-]+$/,
+            /^Trường (THPT|THCS|PT|Phổ) [A-Za-zÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯàáâãèéêìíòóôõùúăđĩũơưẠ-ỹ\s-]+$/,
             "Tên trường không hợp lệ. Viết đúng format ví dụ: Trường THPT/THCS <tên trường>"
           )
           .required("Trường học là bắt buộc."),
@@ -170,7 +170,7 @@ const validationSchema3 = Yup.object({
 // Validation schema cho trường hợp không là đại học
 
 var values_tmp = null;
-function UserForm() {
+function  UserForm() {
   const waitTwoSeconds = async () => {
     await new Promise((resolve) => setTimeout(resolve, 0));
   };
@@ -262,12 +262,13 @@ function UserForm() {
     >
       {({ isSubmitting, values }) => (
         <Form
-          className={`  select-none flex flex-col gap-0 items-center justify-center  w-full ${
+          className={` font-bevietnam select-none flex flex-col gap-0 items-center justify-center w-full ${
             step === 1
-              ? "rounded-xl backdrop-blur-md max-w-md h-150 my-12 border-none bg-white/40"
+              ? " backdrop-blur-xl max-w-md h-150 my-12 border-none rounded-xl bg-[#EDEAD2] shadow-xl ring-1 ring-white/10"
               : "border-none bg-transparent "
           } mx-auto border-2   px-5 py-6`}
         >
+         
           {step === 1 && (
             <>
               <TeamForm />
@@ -276,7 +277,7 @@ function UserForm() {
                   type="submit"
                   disabled={isSubmitting}
                   className={`
-              mt-0 w-full bg-[#770549] hover:bg-[#8b2366] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl shadow-md 
+              mt-0 w-full bg-[#492A51] hover:bg-[#8b2366] hover:scale-105 text-[#EDEAD2] font-semibold py-2 px-4 rounded-xl 
               transition duration-400 
                     ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}
                   `}
@@ -302,7 +303,7 @@ function UserForm() {
                   type="submit"
                   disabled={isSubmitting}
                   className={`
-                    mt-4 w-full bg-[#8A0651] hover:bg-[#AD2971] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-200
+                    mt-4 w-full bg-[#492A51]  hover:bg-[#AD2971] hover:scale-105 text-[#EDEAD2] font-semibold py-2 px-4 rounded-xl  transition duration-200
                     ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}
                   `}
                 >

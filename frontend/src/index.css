@@ -10,3 +10,15 @@
               radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.4), transparent 40%),
               radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.4), transparent 40%);
 }
+
+.font-bevietnam {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.hero-section {
+  background-image: url(/heroBackground.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  aspect-ratio: 15 / 9;
+}
