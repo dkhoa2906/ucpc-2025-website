@@ -160,9 +160,10 @@ const validationSchema3 = Yup.object({
             return age >= 1 && age <= 24;
           }),
 
-        university: Yup.string().required("Tên học là bắt buộc."),
+        university: Yup.string().required("Tên trường là bắt buộc."),
 
         studentId: Yup.string().required("MSSV là bắt buộc."),
+        
         CCCD: Yup.string().required("CCCD là bắt buộc."),
       })
     )
