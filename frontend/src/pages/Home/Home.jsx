@@ -1,5 +1,5 @@
 import React from 'react';
-import Rules from './rules';
+import Rules from '../../components/Rules/rules';
 
 function Home() {
   return (
