@@ -1,12 +1,15 @@
 import React from 'react';
 import Rules from './rules';
+import Header from './header'; 
 
 function Home() {
   return (
-    <div>
-      <h1 className='text-3xl bg-red-500'>Trang chủ</h1>
-      <p>Đây là trang chủ của ứng dụng.</p>
-      <Rules/>
+
+    <div className="w-full pd-16 bg-gradient-to-br from-[#492A51] via-[#1F2937] to-[#374151] text-white">
+      <Header />
+      <div className="relative h-[2000px]">
+        <p>aaa</p>
+      </div>
     </div>
     
   );
