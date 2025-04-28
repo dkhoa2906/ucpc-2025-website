@@ -58,3 +58,7 @@
 .animate-border-slide {
   animation: borderSlide 0.8s ease-out forwards;
 }
+
+html {
+  scroll-behavior: smooth;
+}

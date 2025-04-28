@@ -29,9 +29,9 @@ function Rules() {
   };
 
   return (
-    <div className="space-y-1" id={"rules-section"}>
+    <div className="space-y-1 mx-16 " id={"rules-section"}>
       {/* Header Section */}
-      <div className="bg-[#EDEAD2] text-[#3e1d53] py-10 px-4">
+      <div className="bg-[#EDEAD2] text-[#3e1d53] py-10 px-4 rounded-2xl shadow-lg ">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="pb-4 text-4xl font-extrabold uppercase mb-6 border-b-4 border-[#3e1d53] w-200 inline-block px-4">
             Thể lệ cuộc thi
@@ -48,11 +48,6 @@ function Rules() {
               <p>Đối tượng</p>
             </div>
             <div
-              //   className={`type-item cursor-pointer py-2 px-4 text-lg ${
-              //     activeType === "Hình thức đăng ký"
-              //       ?  "border-t-5 border-[#3e1d53] text-[#3e1d53]"
-              //       : "text-[#3e1d53] opacity-70 hover:opacity-100"
-              //   }`}
               className={`relative type-item cursor-pointer py-2 px-4 text-lg ${
                 activeType === "Hình thức đăng ký"
                   ? "text-[#3e1d53] tab-border"

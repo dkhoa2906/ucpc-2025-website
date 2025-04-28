@@ -1,7 +1,8 @@
 function RulesItem({ title, description }) {
   const lines = description.split("\n");
   return (
-    <div className="bg-[#492A51] w-full text-center h-100">
+    <div className="bg-[#492A51] w-full rounded-2xl shadow-lg text-center h-100 ">
+    {/* // <div className="bg-[#492A51]/70 backdrop-blur-md w-full rounded-2xl shadow-lg text-white px-8 py-6"> */}
       <div className="pb-4 text-4xl pt-5 text-center font-extrabold uppercase mb-6 border-b-4 border-[#EDEAD2] w-200 inline-block px-4 text-[#EDEAD2]">
         {title}
       </div>
