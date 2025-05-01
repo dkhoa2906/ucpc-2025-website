@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './header'; 
-import Rules from '../../components/Rules/rules';
+import Rules from '../../components/Rules/Rules';
 import Footer from '../../components/Footer/footer';
 import Intro from '../../components/Intro/Intro';
 import FadeInSection from '../../components/FadeInSection';
