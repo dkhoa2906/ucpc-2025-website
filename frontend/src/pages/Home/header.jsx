@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Header_bg from '../../assets/Header_bg.png';
 import Navbar from '../../components/Navbar/Navbar';
+import avt from '../../assets/Header_bg.png';
+// import { useDispatch, useSelector } from 'react-redux';
 
 function Header() {
+  
 
   return (
     <div>
@@ -35,52 +38,34 @@ function Header() {
             <a href="#Intro " className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
               Tin tức
             </a>
-            <a href="#testimonials" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
+            <a href="#Rules" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
               Thể lệ
             </a>
             <a href="#pricing" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
               Giải thưởng
             </a>
-            <a href="#" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
-              Liên hệ
+            <a href="" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
+              Nhà tài trợ
             </a>
           </nav>
 
           {/* Đăng nhập + CTA */}
+
           <div className="flex items-center gap-4">
-            <a
-              href="#"
+            <button onClick={() => {}} 
+                 href="#"
               className="text-sm font-medium text-zinc-400 hover:text-white transition-colors hidden sm:block"
             >
               Sign In
-            </a>
-            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 h-10 px-4 py-2">
+            </button>
+            <button  onClick={() => {}}
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 h-10 px-4 py-2">
               Sign up
             </button>
           </div>
+         
         </div>
       </div>
-
-      {/* <nav class="fixed top-0 left-0 right-0 z-50">
-  <div class="mx-auto px-4">
-    <div class="flex items-center justify-between h-16 my-2">
-      <div class="flex items-center gap-16">
-        <a href="/" class="flex items-center">
-          <div class="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center">
-            <div class="w-3 h-3 rounded-full bg-white"></div>
-          </div>
-        </a>
-        <div class="hidden md:flex items-center space-x-8">
-          <button class="text-gray-400 hover:text-white bg-transparent border-none">Features</button>
-          <button class="text-gray-400 hover:text-white bg-transparent border-none">Developers</button>
-          <button class="text-gray-400 hover:text-white bg-transparent border-none">Pricing</button>
-          <button class="text-gray-400 hover:text-white bg-transparent border-none">Changelog</button>
-        </div>
-      </div>
-      <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl">Join waitlist</button>
-    </div>
-  </div>
-</nav> */}
     </div>
   );
 }

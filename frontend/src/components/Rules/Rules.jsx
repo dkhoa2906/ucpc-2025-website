@@ -29,56 +29,56 @@ function Rules() {
   };
 
   return (
-    <div className="space-y-1 mx-16 " id={"rules-section"}>
-      {/* Header Section */}
-      <div className="bg-[#EDEAD2] text-[#3e1d53] py-10 px-4 rounded-2xl shadow-lg ">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="pb-4 text-4xl font-extrabold uppercase mb-6 border-b-4 border-[#3e1d53] w-200 inline-block px-4">
-            Thể lệ cuộc thi
-          </h2>
-          <div className="flex justify-center space-x-8 mt-6 text-center font-semibold text-lg">
-            <div
-              className={`relative type-item cursor-pointer py-2 px-4 text-lg ${
-                activeType === "Đối tượng"
-                  ? "text-[#3e1d53] tab-border"
-                  : "text-[#3e1d53] opacity-70 hover:opacity-100"
-              }`}
-              onClick={() => handleClick("Đối tượng")}
-            >
-              <p>Đối tượng</p>
-            </div>
-            <div
-              className={`relative type-item cursor-pointer py-2 px-4 text-lg ${
-                activeType === "Hình thức đăng ký"
-                  ? "text-[#3e1d53] tab-border"
-                  : "text-[#3e1d53] opacity-70 hover:opacity-100"
-              }`}
-              onClick={() => handleClick("Hình thức đăng ký")}
-            >
-              <p>Hình thức đăng ký</p>
-            </div>
-            <div
-              className={`relative type-item cursor-pointer py-2 px-4 text-lg ${
-                activeType === "Quy định"
-                  ? "text-[#3e1d53] tab-border"
-                  : "text-[#3e1d53] opacity-70 hover:opacity-100"
-              }`}
-              onClick={() => handleClick("Quy định")}
-            >
-              <p>Quy định</p>
+    <section id="Rules">
+      <div className="space-y-1 mx-16 " id={"rules-section"}>
+        {/* Header Section */}
+        <div className="bg-[#EDEAD2] text-[#3e1d53] py-10 px-4 rounded-2xl shadow-lg ">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="pb-4 text-4xl font-extrabold uppercase mb-6 border-b-4 border-[#3e1d53] w-200 inline-block px-4">
+              Thể lệ cuộc thi
+            </h2>
+            <div className="flex justify-center space-x-8 mt-6 text-center font-semibold text-lg">
+              <div
+                className={`relative type-item cursor-pointer py-2 px-4 text-lg ${activeType === "Đối tượng"
+                    ? "text-[#3e1d53] tab-border"
+                    : "text-[#3e1d53] opacity-70 hover:opacity-100"
+                  }`}
+                onClick={() => handleClick("Đối tượng")}
+              >
+                <p>Đối tượng</p>
+              </div>
+              <div
+                className={`relative type-item cursor-pointer py-2 px-4 text-lg ${activeType === "Hình thức đăng ký"
+                    ? "text-[#3e1d53] tab-border"
+                    : "text-[#3e1d53] opacity-70 hover:opacity-100"
+                  }`}
+                onClick={() => handleClick("Hình thức đăng ký")}
+              >
+                <p>Hình thức đăng ký</p>
+              </div>
+              <div
+                className={`relative type-item cursor-pointer py-2 px-4 text-lg ${activeType === "Quy định"
+                    ? "text-[#3e1d53] tab-border"
+                    : "text-[#3e1d53] opacity-70 hover:opacity-100"
+                  }`}
+                onClick={() => handleClick("Quy định")}
+              >
+                <p>Quy định</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="body">
-        {/*Content*/}
-        <RulesItem
-          title={activeType}
-          description={ruleData[activeType].description}
-        />
+        <div className="body">
+          {/*Content*/}
+          <RulesItem
+            title={activeType}
+            description={ruleData[activeType].description}
+          />
+        </div>
       </div>
-    </div>
+    </section>
+
   );
 }
 

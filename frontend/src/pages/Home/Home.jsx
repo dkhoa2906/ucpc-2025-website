@@ -4,18 +4,22 @@ import Rules from '../../components/Rules/rules';
 import Footer from '../../components/Footer/footer';
 import Intro from '../../components/Intro/Intro';
 import FadeInSection from '../../components/FadeInSection';
+import News from '../../components/News/News';
 function Home() {
   return (
     
-    <div className="flex flex-col w-full space-y-7 bg-gradient-to-br from-[#492A51] via-[#1F2937] to-[#374151] text-white">
+    <div className="flex flex-col w-full space-y-0 bg-gradient-to-br from-[#492A51] via-[#1F2937] to-[#374151] text-white">
       <Header />
       <FadeInSection>
         <Intro />
       </FadeInSection>
       
+      <FadeInSection>
+        <News />
+      </FadeInSection>
       <div className="section_end h-16"></div>
       <FadeInSection>
-      <Rules />
+        <Rules />
       </FadeInSection>
       <div className="section_end h-16"></div>
 
