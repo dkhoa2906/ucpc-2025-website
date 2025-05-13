@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/footer';
 import Intro from '../../components/Intro/Intro';
 import FadeInSection from '../../components/FadeInSection';
 import News from '../../components/News/News';
+import UITInformation from '../../components/UITInformation/Info';
 function Home() {
   return (
     
@@ -17,12 +18,12 @@ function Home() {
       <FadeInSection>
         <News />
       </FadeInSection>
-      <div className="section_end h-16"></div>
       <FadeInSection>
         <Rules />
       </FadeInSection>
-      <div className="section_end h-16"></div>
-
+      <FadeInSection>
+        <UITInformation />
+      </FadeInSection>
       <Footer />
        
     </div>
