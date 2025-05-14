@@ -62,3 +62,82 @@
 html {
   scroll-behavior: smooth;
 }
+@keyframes lineScan {
+  0% {
+    left: 0%;
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+.animate-lineScan {
+  animation: lineScan 2.5s ease-in-out infinite;
+}
+@keyframes dropDown {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80px;
+  }
+}
+
+@keyframes expandLine {
+  0% {
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes branchDown {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80px; /* chiều dài rẽ xuống */
+  }
+}
+
+.animate-dropDown {
+  animation: dropDown 1s ease-in-out forwards;
+}
+
+.animate-expandLine {
+  animation: expandLine 1s ease-in-out 1s forwards;
+}
+
+.animate-branchDown {
+  animation: branchDown 0.8s ease-in-out 2s forwards; /* delay để chờ ngang xong */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+.card-animation {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
