@@ -13,7 +13,6 @@ function App() {
         <Route path="/user" element={<User />} />
       </Routes>
     );
-
 }
 
 export default App  

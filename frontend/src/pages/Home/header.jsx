@@ -5,7 +5,7 @@ import avt from '../../assets/Header_bg.png';
 // import { useDispatch, useSelector } from 'react-redux';
 
 function Header() {
-  
+
 
   return (
     <div>
@@ -35,16 +35,16 @@ function Header() {
 
           {/* Nav links */}
           <nav className="hidden md:flex gap-6">
-            <a href="#Intro " className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
+            <a href="#News " className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
               Tin tức
             </a>
             <a href="#Rules" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
               Thể lệ
             </a>
-            <a href="#pricing" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
+            <a href="#Pricing" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
               Giải thưởng
             </a>
-            <a href="" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
+            <a href="#Investor" className="text-lg font-medium text-zinc-400 hover:text-white transition-colors">
               Nhà tài trợ
             </a>
           </nav>
@@ -52,18 +52,18 @@ function Header() {
           {/* Đăng nhập + CTA */}
 
           <div className="flex items-center gap-4">
-            <button onClick={() => {}} 
-                 href="#"
+            <button onClick={() => { }}
+              href="#"
               className="text-sm font-medium text-zinc-400 hover:text-white transition-colors hidden sm:block"
             >
-              Sign In
+              Đăng nhập
             </button>
-            <button  onClick={() => {}}
+            <button onClick={() => { }}
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 h-10 px-4 py-2">
-              Sign up
+              Đăng kí
             </button>
           </div>
-         
+
         </div>
       </div>
     </div>
