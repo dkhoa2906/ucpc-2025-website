@@ -14,7 +14,6 @@ function Home() {
       <FadeInSection>
         <Intro />
       </FadeInSection>
-      
       <FadeInSection>
         <News />
       </FadeInSection>

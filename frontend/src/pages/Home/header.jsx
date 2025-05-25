@@ -2,11 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import Header_bg from '../../assets/Header_bg.png';
 import Navbar from '../../components/Navbar/Navbar';
 import avt from '../../assets/Header_bg.png';
+import LoginModal from '../../components/Login/Login';
+import SignUpModal from '../../components/SignUp/SignUp';
 // import { useDispatch, useSelector } from 'react-redux';
 
 function Header() {
-
-
+  const [showLogin, setShowLogin] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
   return (
     <div>
       {/* <Navbar /> */}
@@ -52,16 +54,18 @@ function Header() {
           {/* Đăng nhập + CTA */}
 
           <div className="flex items-center gap-4">
-            <button onClick={() => { }}
+            <button onClick={() =>  {setShowLogin(true); setShowSignUp(false);} }
               href="#"
               className="text-sm font-medium text-zinc-400 hover:text-white transition-colors hidden sm:block"
             >
               Đăng nhập
             </button>
-            <button onClick={() => { }}
+            <LoginModal isOpen={showLogin} onClose={() => {setShowLogin(false)}}></LoginModal>
+            <button onClick={() =>  {setShowSignUp(true); setShowLogin(false);}}
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 h-10 px-4 py-2">
-              Đăng kí
+              Đăng ký
             </button>
+            <SignUpModal isOpen={showSignUp} onClose={() => {setShowSignUp(false)}}/>
           </div>
 
         </div>

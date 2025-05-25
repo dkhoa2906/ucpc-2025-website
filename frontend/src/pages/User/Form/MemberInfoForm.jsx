@@ -95,59 +95,59 @@ function MemberInfoForm({ isUniversity }) {
               </label>
             </div>
             {/* <div className="flex flex-row gap-1.5 mt-0 w-full max-w-md"> */}
-              {/* Số điện thoại */}
-              <div className="relative mt-1 flex-[6]">
-                <Field
-                  id={`members[${index}].phone`}
-                  name={`members[${index}].phone`}
-                  type="tel"
-                  placeholder=" "
-                  className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
-                />
-                {touched.members?.[index]?.phone && (
-                  <div className=" mt-1">
-                    <ErrorMessage name={`members[${index}].phone`}>
-                      {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
-                    </ErrorMessage>
+            {/* Số điện thoại */}
+            <div className="relative mt-1 flex-[6]">
+              <Field
+                id={`members[${index}].phone`}
+                name={`members[${index}].phone`}
+                type="tel"
+                placeholder=" "
+                className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
+              />
+              {touched.members?.[index]?.phone && (
+                <div className=" mt-1">
+                  <ErrorMessage name={`members[${index}].phone`}>
+                    {(msg) => <div className="text-red-500 text-sm mt-1">{msg}</div>}
+                  </ErrorMessage>
 
-                  </div>
-                )}
-                <label
-                  htmlFor={`members[${index}].phone`}
-                  className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
+                </div>
+              )}
+              <label
+                htmlFor={`members[${index}].phone`}
+                className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
       peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
       peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#492A51]"
-                >
-                  Số điện thoại
-                </label>
-              </div>
+              >
+                Số điện thoại
+              </label>
+            </div>
 
-              {/* Ngày sinh */}
-              <div className="relative mt-1 flex-[4]">
-                <Field
-                  id={`members[${index}].birth`}
-                  name={`members[${index}].birth`}
-                  type="date"
-                  placeholder=" "
-                  className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#492A51] transition"
-                />
-                {touched.members?.[index]?.birth && (
-                  <div className=" mt-1">
-                    <ErrorMessage name={`members[${index}].birth`}>
-                      {(msg) => <div className="text-red-500 text-sm mt-1 font-style: italic">{msg}</div>}
-                    </ErrorMessage>
-                  </div>
-                )}
-                <label
-                  htmlFor={`members[${index}].birth`}
-                  className="absolute left-3 top-1 text-sm text-gray-500 bg-white px-1
+            {/* Ngày sinh */}
+            <div className="relative mt-1 flex-[4]">
+              <Field
+                id={`members[${index}].birth`}
+                name={`members[${index}].birth`}
+                type="date"
+                placeholder=" "
+                className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#492A51] transition"
+              />
+              {touched.members?.[index]?.birth && (
+                <div className=" mt-1">
+                  <ErrorMessage name={`members[${index}].birth`}>
+                    {(msg) => <div className="text-red-500 text-sm mt-1 font-style: italic">{msg}</div>}
+                  </ErrorMessage>
+                </div>
+              )}
+              <label
+                htmlFor={`members[${index}].birth`}
+                className="absolute left-3 top-1 text-sm text-gray-500 bg-white px-1
       transition-all pointer-events-none
       peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
       peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#492A51]"
-                >
-                  Ngày sinh
-                </label>
-              </div>
+              >
+                Ngày sinh
+              </label>
+            </div>
             {/* </div> */}
             {/* Trường học */}
             {isUniversity ? (
@@ -185,33 +185,33 @@ function MemberInfoForm({ isUniversity }) {
             {/* MSSV/CCCD */}
 
             {/* MSSV */}
-            
-              {isUniversity ? (<div className="flex flex-row gap-1.5 mt-0 w-full max-w-md">
-                <div className="relative mt-1">
-                  <Field
-                    id={`members[${index}].studentId`}
-                    name={`members[${index}].studentId`}
-                    placeholder=" "
-                    className="peer w-full border-2 border-gray-400  rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
-                  />
-                  {touched.members?.[index]?.studentId && (
-                    <div className=" mt-1">
 
-                      <ErrorMessage name={`members[${index}].studentId`}>
-                        {(msg) => <div className="text-red-500 text-sm mt-1 font-style: italic">{msg}</div>}
-                      </ErrorMessage>
-                    </div>
-                  )}
-                  <label
-                    htmlFor={`members[${index}].studentId`}
-                    className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
+            {isUniversity ? (<div className="flex flex-row gap-1.5 mt-0 w-full max-w-md">
+              <div className="relative mt-1">
+                <Field
+                  id={`members[${index}].studentId`}
+                  name={`members[${index}].studentId`}
+                  placeholder=" "
+                  className="peer w-full border-2 border-gray-400  rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
+                />
+                {touched.members?.[index]?.studentId && (
+                  <div className=" mt-1">
+
+                    <ErrorMessage name={`members[${index}].studentId`}>
+                      {(msg) => <div className="text-red-500 text-sm mt-1 font-style: italic">{msg}</div>}
+                    </ErrorMessage>
+                  </div>
+                )}
+                <label
+                  htmlFor={`members[${index}].studentId`}
+                  className="absolute left-3 top-1 text-sm text-gray-500 transition-all 
           peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
           peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#492A51]"
-                  >
-                    MSSV
-                  </label>
-                </div>
-                <div className="relative mt-1">
+                >
+                  MSSV
+                </label>
+              </div>
+              <div className="relative mt-1">
                 <Field
                   id={`members[${index}].CCCD`}
                   name={`members[${index}].CCCD`}
@@ -235,9 +235,9 @@ function MemberInfoForm({ isUniversity }) {
                   CCCD
                 </label>
               </div>
-                </div>
-              ) : (
-                <div className="relative mt-1">
+            </div>
+            ) : (
+              <div className="relative mt-1">
                 <Field
                   id={`members[${index}].CCCD`}
                   name={`members[${index}].CCCD`}
@@ -262,10 +262,10 @@ function MemberInfoForm({ isUniversity }) {
                 </label>
               </div>
 
-              )}
+            )}
 
-              {/* CCCD */}
-             
+            {/* CCCD */}
+
 
           </div>
         ))}
@@ -273,7 +273,5 @@ function MemberInfoForm({ isUniversity }) {
     </div>
   );
 }
-
-console.log('values_tmp 2-> ', values_tmp);
 
 export default MemberInfoForm;
