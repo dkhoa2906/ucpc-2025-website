@@ -5,8 +5,8 @@ PULL_OUTPUT=$(git pull origin main)
 
 if [[ "$PULL_OUTPUT" != "Already up to date." ]]; then
   echo "Code changed. Restarting container..."
-  docker-compose down
-  docker-compose up -d --build
+  docker compose down
+  docker compose up -d --build
 else
   echo "No change. Skipping restart."
 fi
