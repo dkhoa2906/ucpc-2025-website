@@ -38,8 +38,10 @@ services:
       - app-network
 
   # frontend:
-  #   build: ./frontend/frontend
+  #   build: ../frontend/frontend
   #   container_name: frontend_app
+  #   env_file:
+  #     - ../frontend/frontend/.env
   #   ports:
   #     - "3000:80" # Map host port 3000 to container port 80 (Nginx default)
   #   environment:
