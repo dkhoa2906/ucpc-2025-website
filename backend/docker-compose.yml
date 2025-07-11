@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres_db
+    env_file:
+      - ./auth-service/.env # Assuming this .env contains POSTGRES_DB, USER, PASSWORD
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  auth-service:
+    build: ./auth-service
+    container_name: auth_service
+    env_file:
+      - ./auth-service/.env
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+  email-service:
+    build: ./email-service
+    container_name: email_service
+    env_file:
+      - ./email-service/.env # Assuming this .env contains EMAIL_USERNAME, EMAIL_PASSWORD
+    ports:
+      - "8081:8081"
+    depends_on:
+      - auth-service # Email service might depend on auth service for user data or other interactions
+    networks:
+      - app-network
+
+  frontend:
+    build: ./frontend/frontend
+    container_name: frontend_app
+    ports:
+      - "3000:80" # Map host port 3000 to container port 80 (Nginx default)
+    environment:
+      # Pass backend API URL to frontend
+      VITE_API_BASE_URL: http://auth-service:8080/api/v1 # Use service name for inter-container communication
+    depends_on:
+      - auth-service
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
