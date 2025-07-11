@@ -1,0 +1,152 @@
+{
+  "info": {
+    "name": "UCPC Auth Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variables": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"test@example.com\", \"password\": \"password123\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/auth/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Email Verify (Send PIN)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"newuser@example.com\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/register/email-verify",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "register",
+            "email-verify"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PIN Verify",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"newuser@example.com\", \"pinCode\": \"123456\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/register/pin-verify",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "register",
+            "pin-verify"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"newuser@example.com\", \"password\": \"securepassword123\", \"fullName\": \"New User\", \"pinCode\": \"123456\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/register/register-user",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "register",
+            "register-user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Refresh Token",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/auth/token-refresh?refreshToken=YOUR_REFRESH_TOKEN",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "auth",
+            "token-refresh"
+          ],
+          "query": [
+            {
+              "key": "refreshToken",
+              "value": "YOUR_REFRESH_TOKEN"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
