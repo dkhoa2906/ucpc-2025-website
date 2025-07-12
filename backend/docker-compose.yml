@@ -12,7 +12,9 @@ services:
       - app-network
 
   auth-service:
-    build: ./auth-service
+    build:
+      context: ./
+      dockerfile: ./auth-service/Dockerfile
     container_name: auth_service
     env_file:
       - ./auth-service/.env
@@ -24,7 +26,9 @@ services:
       - app-network
 
   email-service:
-    build: ./email-service
+    build:
+      context: ./
+      dockerfile: ./email-service/Dockerfile
     container_name: email_service
     env_file:
       - ./email-service/.env # Assuming this .env contains EMAIL_USERNAME, EMAIL_PASSWORD

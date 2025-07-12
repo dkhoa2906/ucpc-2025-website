@@ -1,21 +1,26 @@
 # Stage 1: Build the application
-FROM eclipse-temurin:17-jdk as builder
+FROM openjdk:17-jdk-slim as builder
 
 WORKDIR /app
 
-COPY mvnw ./
-COPY .mvn .mvn/
-COPY pom.xml ./
-COPY src ./src/
+# Copy the entire backend directory into the builder stage
+COPY . /app/backend
 
-RUN ./mvnw clean package -DskipTests
+# Set the working directory to the root of the backend project
+WORKDIR /app/backend
+
+# Install the parent POM to the local Maven repository
+RUN ./mvnw install -N
+
+# Build the auth-service module
+RUN ./mvnw clean package -DskipTests -f auth-service/pom.xml
 
 # Stage 2: Run the application
 FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
-COPY --from=builder /app/target/*.jar /app/auth-service.jar
+COPY --from=builder /app/backend/auth-service/target/*.jar /app/auth-service.jar
 
 EXPOSE 8080
 
