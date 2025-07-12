@@ -1,4 +1,4 @@
-# Stage 1: Build the application
+# Stage 1: Build the entire backend project
 FROM openjdk:17-jdk-slim as builder
 
 WORKDIR /app
@@ -9,13 +9,10 @@ COPY . /app/backend
 # Set the working directory to the root of the backend project
 WORKDIR /app/backend
 
-# Install the parent POM to the local Maven repository
-RUN ./mvnw install -N
+# Build and install all modules to the local Maven repository
+RUN ./mvnw clean install -DskipTests
 
-# Build the email-service module
-RUN ./mvnw clean package -DskipTests -f email-service/pom.xml
-
-# Stage 2: Run the application
+# Stage 2: Run the email-service application
 FROM eclipse-temurin:17-jre
 
 WORKDIR /app
