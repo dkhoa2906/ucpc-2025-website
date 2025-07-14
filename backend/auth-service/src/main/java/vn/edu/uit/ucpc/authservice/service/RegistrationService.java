@@ -21,8 +21,7 @@ import vn.edu.uit.ucpc.authservice.repository.AppUserRepository;
 import vn.edu.uit.ucpc.authservice.repository.UnverifiedUserRepository;
 import vn.edu.uit.ucpc.authservice.util.EmailPinCodeUtil;
 import vn.edu.uit.ucpc.authservice.util.PasswordUtil;
-import vn.edu.uit.ucpc.emailsender.EmailDetails;
-import vn.edu.uit.ucpc.emailsender.EmailSenderService;
+import vn.edu.uit.ucpc.authservice.service.EmailService;
 
 import java.time.LocalDate;
 
@@ -36,7 +35,7 @@ public class RegistrationService {
     UserMapper userMapper;
     PasswordUtil passwordUtil;
     EmailPinCodeUtil emailPinCodeUtil;
-    EmailSenderService emailSenderService;
+    EmailService emailService;
 
     public ResponseEntity<BaseResponse<Void>> emailVerify(EmailVerifyRequest request) {
         if (appUserRepository.existsByEmail(request.getEmail())) {
@@ -49,7 +48,7 @@ public class RegistrationService {
 
         String pinCode = emailPinCodeUtil.generatePinCode(request.getEmail());
 
-        emailSenderService.sendSimpleMail(new EmailDetails(request.getEmail(), "UCPC Email Verification", "Your PIN code is: " + pinCode));
+        emailService.sendEmail(request.getEmail(), "UCPC Email Verification", "Your PIN code is: " + pinCode);
 
         return ResponseEntity.status(HttpStatus.OK).body(
                 BaseResponse.<Void>builder()

@@ -25,22 +25,10 @@ services:
     networks:
       - app-network
 
-  email-service:
-    build:
-      context: .
-      dockerfile: email-service/Dockerfile
-    container_name: email_service
-    env_file:
-      - ./email-service/.env # Assuming this .env contains EMAIL_USERNAME, EMAIL_PASSWORD
-    ports:
-      - "8081:8081"
-    depends_on:
-      - auth-service # Email service might depend on auth service for user data or other interactions
-    networks:
-      - app-network
-
   # frontend:
-  #   build: ../frontend/frontend
+  #   build:
+  #     context: ../frontend/frontend
+  #     dockerfile: Dockerfile
   #   container_name: frontend_app
   #   env_file:
   #     - ../frontend/frontend/.env

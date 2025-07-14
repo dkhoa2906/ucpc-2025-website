@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"vn.edu.uit.ucpc.authservice", "vn.edu.uit.ucpc.emailsender"})
+@ComponentScan(basePackages = {"vn.edu.uit.ucpc.authservice"})
 public class AuthServiceApplication {
 
     public static void main(String[] args) {

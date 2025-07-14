@@ -137,11 +137,12 @@
             <artifactId>swagger-annotations</artifactId>
             <version>2.2.16</version>
         </dependency>
+        
+
+        <!-- Spring Mail Sender -->
         <dependency>
-            <groupId>vn.edu.uit.ucpc</groupId>
-            <artifactId>email-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
 
