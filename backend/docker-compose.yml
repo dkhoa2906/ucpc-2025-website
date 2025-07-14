@@ -4,10 +4,6 @@ services:
     container_name: postgres_db
     env_file:
       - ./auth-service/.env # Assuming this .env contains POSTGRES_DB, USER, PASSWORD
-    environment:
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_USER: ${DB_USERNAME}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
