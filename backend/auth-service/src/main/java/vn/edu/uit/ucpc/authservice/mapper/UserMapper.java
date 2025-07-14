@@ -15,6 +15,13 @@ import vn.edu.uit.ucpc.authservice.entity.Team;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
+    @Mapping(target = "passwordHash", source = "password")
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "role", ignore = true)
+    @Mapping(target = "status", ignore = true)
+    @Mapping(target = "createdAt", ignore = true)
+    @Mapping(target = "team", ignore = true)
+    @Mapping(target = "paymentStatus", ignore = true)
     AppUser toUser(RegistrationRequest request);
 
     @Mapping(source = "team", target = "team")

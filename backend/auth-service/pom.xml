@@ -184,6 +184,8 @@
                     <compilerArgs>
                         <arg>-Amapstruct.defaultComponentModel=spring</arg>
                     </compilerArgs>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
             <plugin>
