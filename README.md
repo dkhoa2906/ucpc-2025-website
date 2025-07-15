@@ -195,23 +195,60 @@ The `auth-service` is a Spring Boot application responsible for user authenticat
 
 ### API Documentation
 
-The API documentation is automatically generated using SpringDoc OpenAPI. Once the `auth-service` is running, you can access the Swagger UI at:
+The API documentation is automatically generated using SpringDoc OpenAPI. You can explore the live API documentation at:
+
+`https://api.khoacd.io.vn/swagger-ui/index.html#`
+
+If you are running the `auth-service` locally, you can also access the Swagger UI at:
 
 `http://localhost:8080/swagger-ui.html`
 
 This interface allows you to explore all available endpoints, their request/response models, and even test them directly.
 
-### Workflow
+### Postman Collection
 
-1.  **Initial Registration (Email Submission):** A new user initiates registration by submitting their email address through the frontend.
-2.  **Email Verification:** The `auth-service` sends a PIN code to the provided email address (via `email-service`). The user then enters this PIN code to verify their email.
-3.  **Complete Registration:** Upon successful email verification, the user proceeds to provide their full registration details (e.g., full name, password, etc.).
-4.  **Login:** After successful registration, the user logs in, receiving a JWT for subsequent authenticated requests.
-5.  **Team Information Submission:** The team lead submits their team's information (team name, members, instructor details) via an authenticated endpoint.
-6.  **Payment:** When a team makes a payment, an external payment gateway sends a POST request to the `/webhook/payment` endpoint.
-    *   The webhook payload contains transaction details, including a `content` field which is expected to contain the `userId` of the user who made the payment.
-    *   The `WebhookController` receives this payload, extracts the `userId`, and calls the `AppUserService` to update the `paymentStatus` for that user to `true`.
-    *   **Authentication:** The webhook endpoint is secured using an `Authorization: Bearer <API_KEY>` header. The `API_KEY` is configured in `application.yaml`.
+To easily test and interact with the backend APIs, you can import the provided Postman collection.
+
+1.  **Download the Collection:** The Postman collection is located at `backend/auth-service/auth-service-postman-collection.json`.
+2.  **Open Postman:** Launch your Postman application.
+3.  **Import the Collection:**
+    *   Click the "Import" button in the top left corner.
+    *   Select "Upload Files" and choose the `auth-service-postman-collection.json` file.
+4.  **Set `baseUrl` Environment Variable:**
+    *   In Postman, navigate to the newly imported collection.
+    *   Go to the "Variables" tab for the collection.
+    *   Ensure the `baseUrl` variable is set to `http://localhost:8080` for local development, or `https://api.khoacd.io.vn` for the live API.
+
+This collection contains pre-configured requests for all major API endpoints, making it easy to send requests and inspect responses.
+
+### Workflow (Frontend Developer's Perspective)
+
+As a frontend developer, your primary interaction will be with the `frontend` directory and the backend APIs. Here's a typical workflow:
+
+1.  **Local Development Setup:**
+    *   Ensure you have the [Prerequisites](#prerequisites) installed.
+    *   Start the backend services using [Docker Compose](#running-with-docker-compose-recommended) or [run them separately](#running-backend-separately). This will make the APIs available at `http://localhost:8080`.
+    *   Navigate to the `frontend/frontend` directory and run `npm install` to install dependencies.
+    *   Start the frontend development server with `npm run dev`. Your frontend application will be accessible at `http://localhost:5173`.
+
+2.  **API Interaction:**
+    *   **Explore APIs:** Use the [API Documentation](#api-documentation) (Swagger UI) to understand available endpoints, request/response structures, and authentication requirements.
+    *   **Test APIs:** Utilize the [Postman Collection](#postman-collection) to send requests to the backend APIs and verify their responses. This is crucial for understanding how the backend behaves before integrating it into the frontend.
+    *   **Integrate APIs:** In your React code, make asynchronous calls to the backend APIs (e.g., using `fetch` or `axios`) to send user data and retrieve information.
+
+3.  **Frontend Development:**
+    *   Implement UI components and pages based on the design specifications.
+    *   Connect your UI to the backend APIs to fetch and display data, and to send user input.
+    *   Ensure proper error handling and loading states for API calls.
+
+4.  **Testing:**
+    *   Test your frontend application thoroughly, ensuring all API integrations work as expected.
+    *   Verify that data is displayed correctly and user interactions trigger the appropriate backend calls.
+
+5.  **Deployment:**
+    *   Once your changes are ready, follow the [Deployment](#deployment) instructions to deploy your frontend and backend changes to the staging or production environment.
+
+This structured approach will help you efficiently develop and integrate with the backend services.
 
 ## Frontend
 
