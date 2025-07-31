@@ -10,7 +10,7 @@ function MemberInfoForm({ isUniversity }) {
   const { values, touched } = useFormikContext();
   const [universityList, setUniversityList] = useState([]);
   values_tmp = values;
-  console.log('values -> ', values_tmp);
+  
   useEffect(() => {
     if (isUniversity) {
       fetch('./data/university_names.json')
@@ -30,12 +30,14 @@ function MemberInfoForm({ isUniversity }) {
   }, [isUniversity]);
   return (
     <div className=" w-full">
-      <h2 className="text-gray-300 text-3xl font-bold mb-4 text-center">Thông tin các thành viên</h2>
-      <div className="flex flex-row gap-10 w-full">
+      <h2 className="text-white text-3xl font-bold mb-3 text-center">Thông tin các thành viên</h2>
+      <div className="flex flex-row justify-center gap-20 w-full">
         {values.members.map((_, index) => (
           <div
             key={index}
-            className="p-5 py-10 border-2 h-fit rounded-lg bg-white shadow-md w-90 flex flex-col gap-2"
+            className="p-5 py-10 border-none h-fit rounded-lg 
+           transition-all duration-300 ease-in-out backdrop-blur-xl max-w-lg my-12  bg-white shadow-[0_0_30px_rgba(255,255,255,0.2)] ring-1 ring-purple-300/40 hover:shadow-[0_0_45px_rgba(255,255,255,0.5)] hover:ring-2 hover:ring-pink-300/60
+            w-90 flex flex-col gap-2"
           >
             <h2 className="font-semibold text-xl mb-1 text-center">Thành viên {index + 1}</h2>
 
@@ -76,7 +78,7 @@ function MemberInfoForm({ isUniversity }) {
                 name={`members[${index}].email`}
                 type="email"
                 placeholder=" "
-                className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
+                className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 hover:border-[#AD2971] focus:ring-2 focus:ring-[#492A51] transition"
               />
               {touched.members?.[index]?.email && (
                 <div className=" mt-1">
@@ -102,7 +104,7 @@ function MemberInfoForm({ isUniversity }) {
                 name={`members[${index}].phone`}
                 type="tel"
                 placeholder=" "
-                className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
+                className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 hover:border-[#AD2971] focus:ring-2 focus:ring-[#492A51] transition"
               />
               {touched.members?.[index]?.phone && (
                 <div className=" mt-1">
@@ -129,7 +131,7 @@ function MemberInfoForm({ isUniversity }) {
                 name={`members[${index}].birth`}
                 type="date"
                 placeholder=" "
-                className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#492A51] transition"
+                className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 hover:border-[#AD2971] focus:ring-2 focus:ring-[#492A51] transition"
               />
               {touched.members?.[index]?.birth && (
                 <div className=" mt-1">
@@ -161,7 +163,7 @@ function MemberInfoForm({ isUniversity }) {
                   id={`members[${index}].university`}
                   name={`members[${index}].university`}
                   placeholder=" "
-                  className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
+                  className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 hover:border-[#AD2971] focus:ring-2 focus:ring-[#492A51] transition"
                 />
                 {touched.members?.[index]?.university && (
                   <div className=" mt-1">
@@ -192,7 +194,7 @@ function MemberInfoForm({ isUniversity }) {
                   id={`members[${index}].studentId`}
                   name={`members[${index}].studentId`}
                   placeholder=" "
-                  className="peer w-full border-2 border-gray-400  rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
+                  className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 hover:border-[#AD2971] focus:ring-2 focus:ring-[#492A51] transition"
                 />
                 {touched.members?.[index]?.studentId && (
                   <div className=" mt-1">
@@ -216,7 +218,7 @@ function MemberInfoForm({ isUniversity }) {
                   id={`members[${index}].CCCD`}
                   name={`members[${index}].CCCD`}
                   placeholder=" "
-                  className="peer w-full border-2 border-gray-400  rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
+                  className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 hover:border-[#AD2971] focus:ring-2 focus:ring-[#492A51] transition"
                 />
                 {touched.members?.[index]?.CCCD && (
                   <div className=" mt-1">
@@ -242,7 +244,7 @@ function MemberInfoForm({ isUniversity }) {
                   id={`members[${index}].CCCD`}
                   name={`members[${index}].CCCD`}
                   placeholder=" "
-                  className="peer w-full border-2 border-gray-400  rounded px-3 pt-5 pb-2 focus:ring-2 focus:ring-[#492A51] transition"
+                  className="peer w-full border-2 border-gray-400 rounded px-3 pt-5 pb-2 hover:border-[#AD2971] focus:ring-2 focus:ring-[#492A51] transition"
                 />
                 {touched.members?.[index]?.CCCD && (
                   <div className=" mt-1">

@@ -3,6 +3,7 @@
 :root {
     margin: 0;
     padding: 0;
+   height:100%;
 }
 .overlay-blur {
   background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.4), transparent 40%),
@@ -12,7 +13,7 @@
 }
 
 .font-bevietnam {
-  font-family: 'Be Vietnam Pro', sans-serif;
+  
 }
 
 .hero-section {

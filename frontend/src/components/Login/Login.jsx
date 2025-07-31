@@ -7,26 +7,55 @@ import {
     faEyeSlash,
     faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function LoginModal({ isOpen, onClose }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-
-    const handleSubmit = (e) => {
+    
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Đăng nhập với:", { username, password });
+        try { 
+          
+            toast.info("Đang đăng nhập...");
+            const res = await axios.post("https://api.khoacd.io.vn/auth/login", {
+                email: username,
+                password
+            });
+            toast.success("Đăng nhập thành công!");
+            console.log("Login successful:", res.data);
+            
+            // Lưu token vào localStorage hoặc state quản lý người dùng
+            localStorage.setItem("token", res.data.accessToken); // Lưu token vào localStorage 
+            localStorage.setItem("refreshToken", res.data.refreshToken); // Lưu refresh token
+            localStorage.setItem("email", username); // Lưu thông tin người dùng
+            console.log("User email saved:", username);
+            setUsername(username); // Cập nhật state username
+            setPassword(""); // Xóa mật khẩu sau khi đăng nhập thành công
+            window.location.reload();
+            onClose(); // Đóng modal sau khi đăng nhập thành công
+        }
+        catch (err) {
+            const message = err.response?.data?.message || "Có lỗi xảy ra khi đăng nhập.";
+            console.error("Lỗi đăng nhập:", message);
+            toast.error(message);
+            return;
+        }
     };
 
     if (!isOpen) return null;
 
     return (
+       
         <div
             style={styles.overlay}
             onClick={(e) => {
                 if (e.target === e.currentTarget) onClose(); // chỉ đóng nếu click ra ngoài
             }}
-        >
+        >  
+        
             <div style={styles.modal}>
                 {/* Nút đóng */}
                 <FontAwesomeIcon
@@ -46,7 +75,7 @@ function LoginModal({ isOpen, onClose }) {
                         />
                         <input
                             type="text"
-                            placeholder="Tên đăng nhập"
+                            placeholder="Email"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             required
@@ -83,7 +112,9 @@ function LoginModal({ isOpen, onClose }) {
                         Đăng nhập
                     </button>
                 </form>
+                
             </div>
+           
         </div>
     );
 }
@@ -112,6 +143,6 @@ const styles = {
         boxShadow: "0 0 40px rgba(208,32,157,0.9)",  // phát sáng xanh cyan
         border: "1px solid rgba(0, 255, 255, 0.2)",    // viền phát sáng nhẹ
     },
-   
+
 };
 export default LoginModal;

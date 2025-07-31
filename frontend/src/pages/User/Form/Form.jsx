@@ -3,6 +3,8 @@ import TeamForm from "./TeamForm";
 import MemberInfoForm from "./MemberInfoForm";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const validationSchema = Yup.object({
   teamName: Yup.string().required("Tên đội là bắt buộc."), //không có regex vì không cần thiết
@@ -93,7 +95,7 @@ const validationSchema2 = Yup.object({
           )
           .required("Trường học là bắt buộc."),
         CCCD: Yup.string().required("CCCD là bắt buộc."),
-        
+
       })
     )
     .min(3, "Phải có đúng 3 thành viên")
@@ -156,14 +158,13 @@ const validationSchema3 = Yup.object({
             ) {
               age--;
             }
-            console.log("age:", age);
             return age >= 1 && age <= 24;
           }),
 
         university: Yup.string().required("Tên trường là bắt buộc."),
 
         studentId: Yup.string().required("MSSV là bắt buộc."),
-        
+
         CCCD: Yup.string().required("CCCD là bắt buộc."),
       })
     )
@@ -171,32 +172,45 @@ const validationSchema3 = Yup.object({
     .max(3, "Phải có đúng 3 thành viên"),
 });
 // Validation schema cho trường hợp không là đại học
-
-var values_tmp = null;
-function  UserForm() {
+var values_tmp = {};
+function UserForm() {
   const waitTwoSeconds = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 0));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
   };
   const [step, setStep] = useState(1);
 
   const handleSubmit = async (values) => {
+
+    console.log("Submitting values:", values);
+    const data = {
+      teamName: values.teamName,
+      instructorName: values.instructorName,
+      instructorEmail: values.instructorEmail,
+      instructorPhone: values.instructorPhone,
+      level: values.level,
+      members: values.members.map((member) => ({
+        fullName: member.fullName,
+        email: member.email,
+        phone: member.phone,
+        birth: member.birth,
+        university: member.university,
+        studentId: member.studentId,
+        CCCD: member.CCCD,
+      })),
+    };
+    console.log("Data to send:", data);
     try {
-      const response = await fetch("http://localhost:8080/api/v1/update-info", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values), // có thể là values từ bước 2
+      const res = await axios.put("https://api.khoacd.io.vn/team/update-info", {
+        data,
       });
 
-      if (!response.ok) throw new Error("Lỗi khi gửi dữ liệu");
-
-      const result = await response.json();
-      console.log("Gửi thành công:", result);
+      toast.success("Cập nhật thông tin thành công!");
+      console.log("Gửi thành công:", res.data);
     } catch (error) {
+      toast.error("Lỗi khi gửi dữ liệu: " + error.message);
       console.error("Lỗi khi gửi:", error.message);
     }
-    await new Promise((resolve) => setTimeout(resolve, 0));
+
     console.log("Submitted:", values);
   };
 
@@ -242,8 +256,8 @@ function  UserForm() {
         step === 1
           ? validationSchema
           : values_tmp.level === "highschool"
-          ? validationSchema2
-          : validationSchema3
+            ? validationSchema2
+            : validationSchema3
       }
       onSubmit={async (values, { setSubmitting, setTouched }) => {
         if (step === 1) {
@@ -257,6 +271,7 @@ function  UserForm() {
           console.log("Step 2:", values_tmp, values);
           values_tmp = values;
           try {
+
             await handleSubmit(values);
           } finally {
             setSubmitting(false);
@@ -268,13 +283,12 @@ function  UserForm() {
     >
       {({ isSubmitting, values }) => (
         <Form
-          className={`font-bevietnam select-none flex flex-col gap-0 items-center justify-center w-full ${
-            step === 1
-              ? " backdrop-blur-xl max-w-lg h-150 my-12 border-none rounded-xl bg-[#EDEAD2] shadow-xl ring-1 ring-white/10"
-              : "border-none bg-transparent "
-          } mx-auto border-2   px-10 py-6`}
-        >
-         
+        className={`font-bevietnam select-none flex flex-col gap-0 items-center justify-center w-full
+          ${step === 1
+            ? "transition-all duration-300 ease-in-out backdrop-blur-xl max-w-lg h-150 my-12 rounded-2xl bg-white shadow-[0_0_30px_rgba(255,255,255,0.2)] ring-1 ring-purple-300/40 hover:shadow-[0_0_45px_rgba(255,255,255,0.5)] hover:ring-2 hover:ring-pink-300/60"
+            : "border-none bg-transparent "
+          } mx-auto px-10 py-6`}
+      >
           {step === 1 && (
             <>
               <TeamForm />
@@ -283,7 +297,7 @@ function  UserForm() {
                   type="submit"
                   disabled={isSubmitting}
                   className={`
-              mt-0 w-full bg-[#492A51] hover:bg-[#8b2366] hover:scale-105 text-[#EDEAD2] font-semibold py-2 px-4 rounded-xl 
+              mt-0 w-full bg-[#492A51] hover:bg-[#8b2366] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl 
               transition duration-400 
                     ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}
                   `}
@@ -291,10 +305,10 @@ function  UserForm() {
                   {isSubmitting ? (
                     <>
                       <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
-                      <span className = "text-lg">Đang xử lý...</span>
+                      <span className="text-lg">Đang xử lý...</span>
                     </>
                   ) : (
-                    <span className = "text-lg">Tiếp tục</span>
+                    <span className="text-lg">Tiếp tục</span>
                   )}
                 </button>
               </div>
@@ -309,17 +323,17 @@ function  UserForm() {
                   type="submit"
                   disabled={isSubmitting}
                   className={`
-                    mt-4 w-full bg-[#492A51]  hover:bg-[#AD2971] hover:scale-105 text-[#EDEAD2] font-semibold py-2 px-4 rounded-xl  transition duration-200
+                    mt-4 w-full bg-[#492A51]  hover:bg-[#AD2971] hover:scale-105 text-white font-semibold py-2 px-4 rounded-xl  transition duration-200
                     ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}
                   `}
                 >
                   {isSubmitting ? (
                     <>
                       <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
-                      <span className = "text-lg">Đang đăng kí...</span>
+                      <span className="text-lg">Đang đăng kí...</span>
                     </>
                   ) : (
-                    <span className = "text-lg">Đăng kí</span>
+                    <span className="text-lg">Đăng kí</span>
                   )}
                 </button>
               </div>
